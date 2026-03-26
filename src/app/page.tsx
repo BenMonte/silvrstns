@@ -9,8 +9,11 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center px-6 py-36 text-center sm:py-48 md:py-56">
-        <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
+        <p className="mb-3 text-[11px] uppercase tracking-[0.4em] text-text-muted">
           SILVRSTNS
+        </p>
+        <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
+          Goth jewelry, crafted with intention. Designed to be worn every day.
         </p>
         <Link
           href="/shop"
@@ -18,9 +21,6 @@ export default function Home() {
         >
           Shop the Collection
         </Link>
-        <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
-          Goth jewelry, crafted with intention. Designed to be worn every day.
-        </p>
       </section>
 
       <SectionWrapper className="py-24 sm:py-32">
