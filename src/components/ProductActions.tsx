@@ -32,7 +32,7 @@ export default function ProductActions({ product }: Props) {
       {/* Size selector */}
       <div className="mt-8">
         <label className="mb-2 block text-[13px] text-text-muted">
-          {hasMultipleSizes ? "Sizes (in.)" : "Size"}
+          {hasMultipleSizes ? "Sizes (inches)" : "Size"}
         </label>
         <div className="relative">
           <select
