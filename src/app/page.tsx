@@ -12,15 +12,15 @@ export default function Home() {
         <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
           SILVRSTNS
         </p>
-        <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
-          Goth jewelry, crafted with intention. Designed to be worn every day.
-        </p>
         <Link
           href="/shop"
           className="mt-12 inline-block border border-border px-10 py-4 text-[13px] uppercase tracking-[0.2em] text-text transition-all duration-300 hover:border-accent hover:text-accent-hover"
         >
           Shop the Collection
         </Link>
+        <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
+          Goth jewelry, crafted with intention. Designed to be worn every day.
+        </p>
       </section>
 
       <SectionWrapper className="py-24 sm:py-32">
