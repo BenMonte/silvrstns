@@ -5,7 +5,7 @@ export type Product = {
   price: number;
   shortDescription: string;
   fullDescription: string;
-  category: "rings" | "necklaces" | "bracelets" | "earrings";
+  category: "necklaces" | "pendants" | "rings" | "bracelets" | "glasses" | "accessories";
   material: string;
   inventory: number;
   featured: boolean;
@@ -81,7 +81,7 @@ export const products: Product[] = [
       "Small drop earrings with a natural grey stone.",
     fullDescription:
       "Miniature teardrop earrings featuring a natural grey labradorite stone set in a thin silver bezel. The stones are hand-selected for their subtle color shift — a flash of blue-grey when they catch the light. Lightweight enough to wear all day with a secure push-back closure.",
-    category: "earrings",
+    category: "accessories",
     material: "Sterling Silver 925, Labradorite",
     inventory: 3,
     featured: false,

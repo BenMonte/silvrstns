@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/SectionWrapper";
-import ProductCard from "@/components/ProductCard";
+import ShopContent from "@/components/ShopContent";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -24,11 +24,7 @@ export default function ShopPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ShopContent products={products} />
     </SectionWrapper>
   );
 }
