@@ -34,7 +34,7 @@ function SuccessContent() {
       </h1>
       {orderNumber && (
         <p className="mt-5 text-[13px] uppercase tracking-[0.25em] text-text-muted">
-          Order {orderNumber}
+          Order #{orderNumber}
         </p>
       )}
       <p className="mt-8 max-w-md text-base leading-[1.8] text-text-muted">

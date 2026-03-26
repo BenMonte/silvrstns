@@ -56,7 +56,7 @@ export default function BuyNowButton({
     <button
       disabled={soldOut || loading}
       onClick={handleBuyNow}
-      className="mt-4 w-full bg-text py-4 text-[13px] uppercase tracking-[0.2em] text-bg transition-opacity duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-30 sm:w-auto sm:px-16"
+      className="mt-4 w-full border border-text bg-text py-4 text-[13px] uppercase tracking-[0.2em] text-bg transition-all duration-300 hover:bg-transparent hover:text-text disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-text disabled:hover:text-bg sm:w-auto sm:px-16"
     >
       {loading ? "Redirecting…" : "Check Out Now"}
     </button>
