@@ -34,6 +34,7 @@ type CartContextValue = {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
+// key used to persist cart between page reloads
 const STORAGE_KEY = "silvrstns-cart";
 
 export function CartProvider({ children }: { children: ReactNode }) {
@@ -46,7 +47,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) setItems(JSON.parse(stored));
     } catch {
-      // Ignore malformed data
+      // localStorage might have stale/broken json, just ignore it
     }
     setLoaded(true);
   }, []);

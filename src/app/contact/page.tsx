@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, type FormEvent } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 
-export const metadata: Metadata = {
-  title: "Contact — SilvrStns",
-  description: "Get in touch with SilvrStns for orders, questions, or collaborations.",
-};
-
+// no real backend yet — just shows a confirmation for now
 export default function ContactPage() {
+  const [sent, setSent] = useState(false);
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSent(true);
+  }
+
   return (
     <SectionWrapper className="py-24 sm:py-32">
       <div className="mb-20 max-w-xl sm:mb-24">
@@ -23,7 +28,20 @@ export default function ContactPage() {
       </div>
 
       <div className="grid gap-20 lg:grid-cols-2">
-        <form className="space-y-8">
+        {sent ? (
+          <div className="flex flex-col justify-center py-16">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-text-muted mb-4">
+              Message sent
+            </p>
+            <h2 className="text-2xl font-light tracking-tight sm:text-3xl">
+              Thanks for reaching out.
+            </h2>
+            <p className="mt-5 text-base leading-[1.8] text-text-muted">
+              We&apos;ll get back to you within 24–48 hours.
+            </p>
+          </div>
+        ) : (
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div>
             <label htmlFor="name" className="mb-3 block text-[11px] uppercase tracking-[0.2em] text-text-muted">
               Name
@@ -73,6 +91,7 @@ export default function ContactPage() {
             Send Message
           </button>
         </form>
+        )}
 
         <div className="flex flex-col justify-center space-y-10">
           <div>

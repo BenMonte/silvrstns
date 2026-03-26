@@ -25,8 +25,8 @@ Create a `.env.local` file with:
 
 ```env
 STRIPE_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-90VGQKR9SB
-NEXT_PUBLIC_CLARITY_PROJECT_ID=w1oqahu52l
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_id
 ```
 
 Optional (used as fallback for Stripe redirect URLs):

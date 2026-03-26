@@ -1,11 +1,17 @@
+"use client";
+
 import Link from "next/link";
-import type { Metadata } from "next";
+import { useEffect } from "react";
+import { useCart } from "@/context/CartContext";
 
-export const metadata: Metadata = {
-  title: "Order Confirmed — SilvrStns",
-};
-
+// clear the cart once after a successful purchase
 export default function CheckoutSuccessPage() {
+  const { clearCart } = useCart();
+
+  useEffect(() => {
+    clearCart();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <section className="flex flex-1 flex-col items-center justify-center px-6 py-36 text-center sm:py-48">
       <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">

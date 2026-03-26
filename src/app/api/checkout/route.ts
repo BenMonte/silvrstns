@@ -22,6 +22,7 @@ export async function POST(request: Request) {
       if (!item.quantity || item.quantity < 1 || !Number.isInteger(item.quantity)) {
         throw new Error("Invalid quantity");
       }
+      // look up real product so we never trust client-side prices
       const product = products.find((p) => p.id === item.productId);
       if (!product) {
         throw new Error("Product not found");
@@ -39,6 +40,7 @@ export async function POST(request: Request) {
       };
     });
 
+    // need the origin for redirect urls — falls back to env var for production
     const origin = request.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "";
 
     const session = await stripe.checkout.sessions.create({

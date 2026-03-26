@@ -11,6 +11,7 @@ export type Product = {
   featured: boolean;
 };
 
+// anything at or below this shows a "low stock" badge
 export const LOW_STOCK_THRESHOLD = 5;
 
 export function getProductBySlug(slug: string): Product | undefined {
@@ -21,6 +22,7 @@ export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }
 
+// tries same category first, then fills with other products if needed
 export function getRelatedProducts(product: Product, limit = 4): Product[] {
   return products
     .filter((p) => p.category === product.category && p.id !== product.id)
