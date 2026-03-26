@@ -51,6 +51,9 @@ export async function POST(request: Request) {
       line_items: lineItems,
       metadata: { order_number: orderNumber },
       client_reference_id: orderNumber,
+      shipping_address_collection: {
+        allowed_countries: ["US", "CA", "GB", "AU"],
+      },
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout/cancel`,
     });
