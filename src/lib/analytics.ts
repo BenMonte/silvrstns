@@ -3,7 +3,6 @@ type GtagEvent = {
   params?: Record<string, unknown>;
 };
 
-// wraps gtag so it doesn't blow up during ssr or if analytics is blocked
 function sendEvent({ action, params }: GtagEvent) {
   if (typeof window === "undefined") return;
   if (typeof window.gtag !== "function") return;

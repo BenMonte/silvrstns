@@ -3,7 +3,6 @@ import SectionWrapper from "@/components/SectionWrapper";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 
-// only show products marked as featured on the homepage
 const featured = products.filter((p) => p.featured);
 
 export default function Home() {

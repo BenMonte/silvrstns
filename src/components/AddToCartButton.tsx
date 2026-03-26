@@ -24,7 +24,7 @@ export default function AddToCartButton({
 
   const soldOut = inventory === 0;
   const inCart = items.find((i) => i.productId === productId)?.quantity ?? 0;
-  const atMax = inCart >= inventory; // don't let them add more than what's in stock
+  const atMax = inCart >= inventory;
 
   let label = "Add to Cart";
   if (soldOut) label = "Sold Out";

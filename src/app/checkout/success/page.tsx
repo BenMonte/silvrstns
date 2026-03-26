@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useCart } from "@/context/CartContext";
 
-// clear the cart once after a successful purchase
 export default function CheckoutSuccessPage() {
   const { clearCart } = useCart();
 

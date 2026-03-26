@@ -11,7 +11,6 @@ export type Product = {
   featured: boolean;
 };
 
-// anything at or below this shows a "low stock" badge
 export const LOW_STOCK_THRESHOLD = 5;
 
 export function getProductBySlug(slug: string): Product | undefined {

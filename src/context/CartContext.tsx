@@ -34,7 +34,6 @@ type CartContextValue = {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
-// key used to persist cart between page reloads
 const STORAGE_KEY = "silvrstns-cart";
 
 export function CartProvider({ children }: { children: ReactNode }) {
