@@ -68,9 +68,7 @@ export default function Home() {
             </h2>
             <p className="mt-8 text-base leading-[1.8] text-text-muted">
               SilvrStns started with a simple idea: jewelry shouldn&apos;t compete
-              for attention — it should complete what you&apos;re already wearing.
-              Every piece is designed to be quiet, durable, and intentionally
-              minimal.
+              for attention, it should simply compliment what you&apos;re already wearing.
             </p>
             <Link
               href="/about"

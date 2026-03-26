@@ -8,6 +8,7 @@ const PLANNED_CATEGORIES = [
   "necklaces",
   "pendants",
   "rings",
+  "earrings",
   "bracelets",
   "glasses",
   "accessories",
@@ -56,8 +57,14 @@ export default function ShopContent({ products }: { products: Product[] }) {
         ? [active.toLowerCase()]
         : [];
 
+  const heading = active === "All" ? "All Pieces" : active;
+
   return (
     <>
+      <h1 className="mb-10 text-3xl font-light tracking-tight sm:mb-12 sm:text-4xl md:text-5xl">
+        {heading}
+      </h1>
+
       <nav className="mb-14 flex flex-wrap gap-x-6 gap-y-3 sm:mb-16 sm:gap-x-8">
         {["All", ...PLANNED_CATEGORIES.map((c) => c.charAt(0).toUpperCase() + c.slice(1))].map(
           (cat) => (

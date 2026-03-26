@@ -32,7 +32,7 @@ export default function AboutPage() {
             <p>
               SilvrStns was born out of frustration with jewelry that tries too
               hard. We wanted pieces that disappear into your look instead of
-              dominating it — simple forms in silver and natural stone that feel
+              dominating it, simple forms in silver and natural stone that feel
               as good as they look.
             </p>
             <p>
@@ -41,7 +41,7 @@ export default function AboutPage() {
               jewelry you reach for every morning without thinking twice.
             </p>
             <p>
-              We&apos;re a small independent brand — no massive catalog, no
+              We&apos;re a small independent brand, no massive catalog, no
               seasonal trends. Just a focused collection that grows slowly and
               deliberately.
             </p>
