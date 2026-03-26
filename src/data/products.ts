@@ -24,11 +24,11 @@ export function getProductById(id: string): Product | undefined {
 export function getSizesForCategory(category: Product["category"]): string[] {
   switch (category) {
     case "rings":
-      return ["7 in.", "8 in.", "9 in.", "10 in."];
+      return ["7", "8", "9", "10"];
     case "bracelets":
-      return ["7 in.", "8 in."];
+      return ["7", "8"];
     case "necklaces":
-      return ["20 in."];
+      return ["20"];
     default:
       return ["One Size"];
   }
