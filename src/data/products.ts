@@ -28,7 +28,6 @@ export function getRelatedProducts(product: Product, limit = 4): Product[] {
     .slice(0, limit);
 }
 
-// ── Product catalog ──
 export const products: Product[] = [
   {
     id: "signet-ring-matte",

@@ -13,7 +13,6 @@ export default function ProductCard({ product }: { product: Product }) {
       aria-disabled={soldOut}
       tabIndex={soldOut ? -1 : undefined}
     >
-      {/* Image container */}
       <div className="relative aspect-[3/4] overflow-hidden bg-surface">
         <div className="flex h-full w-full items-center justify-center transition-transform duration-700 ease-out group-hover:scale-[1.04]">
           <span className="text-[11px] uppercase tracking-[0.25em] text-text-muted/25">
@@ -33,7 +32,6 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </div>
 
-      {/* Product info */}
       <div className="mt-5 space-y-1.5">
         <h3 className="text-sm font-normal text-text transition-colors duration-300 group-hover:text-accent-hover">
           {product.name}

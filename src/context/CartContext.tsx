@@ -10,8 +10,6 @@ import {
 } from "react";
 import { getProductById } from "@/data/products";
 
-// ── Types ──
-
 export type CartItem = {
   productId: string;
   slug: string;
@@ -38,14 +36,11 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 const STORAGE_KEY = "silvrstns-cart";
 
-// ── Provider ──
-
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  // Load from localStorage on mount
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
@@ -56,7 +51,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setLoaded(true);
   }, []);
 
-  // Persist to localStorage on change (skip initial load)
   useEffect(() => {
     if (loaded) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
@@ -126,8 +120,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     </CartContext.Provider>
   );
 }
-
-// ── Hook ──
 
 export function useCart() {
   const ctx = useContext(CartContext);

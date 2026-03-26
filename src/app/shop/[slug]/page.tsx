@@ -11,12 +11,10 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// Generate static paths for all products at build time
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-// Dynamic metadata per product
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
@@ -55,7 +53,6 @@ export default async function ProductPage({ params }: Props) {
       />
 
       <SectionWrapper className="py-20 sm:py-28">
-        {/* Breadcrumb */}
         <nav className="mb-12 text-[11px] uppercase tracking-[0.15em] text-text-muted sm:mb-16">
           <Link href="/shop" className="transition-colors duration-300 hover:text-text">
             Shop
@@ -64,11 +61,8 @@ export default async function ProductPage({ params }: Props) {
           <span className="text-text">{product.name}</span>
         </nav>
 
-        {/* ── Product layout: image + details ── */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Image gallery area */}
           <div className="space-y-3">
-            {/* Main image */}
             <div className="aspect-[3/4] overflow-hidden bg-surface">
               <div className="flex h-full w-full items-center justify-center">
                 <span className="text-[11px] uppercase tracking-[0.25em] text-text-muted/20">
@@ -77,7 +71,6 @@ export default async function ProductPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Thumbnail row */}
             <div className="grid grid-cols-4 gap-3">
               {[1, 2, 3, 4].map((i) => (
                 <div
@@ -88,7 +81,6 @@ export default async function ProductPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Product details */}
           <div className="flex flex-col justify-center lg:py-8">
             <p className="mb-4 text-[11px] uppercase tracking-[0.3em] text-text-muted">
               {product.category}
@@ -108,7 +100,6 @@ export default async function ProductPage({ params }: Props) {
               {product.fullDescription}
             </p>
 
-            {/* Material & details */}
             <div className="mt-10 border-t border-border pt-8">
               <div className="space-y-4">
                 <div className="flex justify-between text-[13px]">
@@ -122,7 +113,6 @@ export default async function ProductPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Add to cart */}
             <AddToCartButton
               productId={product.id}
               slug={product.slug}
@@ -135,7 +125,6 @@ export default async function ProductPage({ params }: Props) {
         </div>
       </SectionWrapper>
 
-      {/* ── Related Products ── */}
       {related.length > 0 && (
         <section className="border-t border-border">
           <SectionWrapper className="py-24 sm:py-32">

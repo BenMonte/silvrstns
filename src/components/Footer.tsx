@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8">
         <div className="flex flex-col items-center gap-10 text-center sm:flex-row sm:justify-between sm:text-left">
-          {/* Brand */}
           <div>
             <p className="text-sm font-normal tracking-[0.35em] text-text">
               SILVRSTNS
@@ -15,7 +14,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Footer links */}
           <div className="flex gap-10">
             <Link href="/shop" className="text-xs uppercase tracking-[0.15em] text-text-muted transition-colors duration-300 hover:text-text">
               Shop

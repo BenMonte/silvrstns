@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <SectionWrapper className="py-24 sm:py-32">
-      {/* Header */}
       <div className="mb-20 max-w-xl sm:mb-24">
         <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-text-muted">
           Contact
@@ -24,7 +23,6 @@ export default function ContactPage() {
       </div>
 
       <div className="grid gap-20 lg:grid-cols-2">
-        {/* Contact form */}
         <form className="space-y-8">
           <div>
             <label htmlFor="name" className="mb-3 block text-[11px] uppercase tracking-[0.2em] text-text-muted">
@@ -76,7 +74,6 @@ export default function ContactPage() {
           </button>
         </form>
 
-        {/* Contact info sidebar */}
         <div className="flex flex-col justify-center space-y-10">
           <div>
             <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-text-muted">

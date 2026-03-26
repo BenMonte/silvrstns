@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function ShopPage() {
   return (
     <SectionWrapper className="py-24 sm:py-32">
-      {/* Page header */}
       <div className="mb-16 max-w-xl sm:mb-20">
         <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-text-muted">
           Collection
@@ -25,7 +24,6 @@ export default function ShopPage() {
         </p>
       </div>
 
-      {/* Product grid */}
       <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

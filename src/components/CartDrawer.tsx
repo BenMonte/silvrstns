@@ -53,7 +53,6 @@ export default function CartDrawer() {
 
   return (
     <>
-      {/* Backdrop */}
       {isDrawerOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/60 transition-opacity"
@@ -61,13 +60,11 @@ export default function CartDrawer() {
         />
       )}
 
-      {/* Drawer panel */}
       <div
         className={`fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col bg-bg border-l border-border transition-transform duration-500 ease-out ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Header */}
         <div className="flex items-center justify-between border-b border-border px-6 py-6">
           <h2 className="text-[13px] font-normal uppercase tracking-[0.2em]">
             Cart{itemCount > 0 && ` (${itemCount})`}
@@ -94,7 +91,6 @@ export default function CartDrawer() {
           </button>
         </div>
 
-        {/* Cart contents */}
         {items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
             <p className="text-sm text-text-muted">Your cart is empty.</p>
@@ -108,7 +104,6 @@ export default function CartDrawer() {
           </div>
         ) : (
           <>
-            {/* Line items */}
             <div className="flex-1 overflow-y-auto px-6 py-6">
               <ul className="space-y-6">
                 {items.map((item) => {
@@ -125,7 +120,6 @@ export default function CartDrawer() {
                       className="block h-20 w-16 flex-shrink-0 rounded-sm bg-surface"
                     />
 
-                    {/* Details */}
                     <div className="flex flex-1 flex-col justify-between">
                       <div>
                         <Link
@@ -141,7 +135,6 @@ export default function CartDrawer() {
                       </div>
 
                       <div className="flex items-center justify-between">
-                        {/* Quantity controls */}
                         <div className="flex items-center gap-3">
                           <button
                             onClick={() =>
@@ -175,14 +168,12 @@ export default function CartDrawer() {
                           )}
                         </div>
 
-                        {/* Line total */}
                         <p className="text-sm text-text">
                           ${(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
                     </div>
 
-                    {/* Remove */}
                     <button
                       onClick={() => removeItem(item.productId)}
                       className="self-start text-text-muted/50 transition-colors hover:text-text"
@@ -209,7 +200,6 @@ export default function CartDrawer() {
               </ul>
             </div>
 
-            {/* Footer: subtotal + checkout */}
             <div className="border-t border-border px-6 py-8 space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-[13px] text-text-muted">Subtotal</span>

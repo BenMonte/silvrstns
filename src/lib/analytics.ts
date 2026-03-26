@@ -1,6 +1,3 @@
-// Lightweight GA4 event helpers for ecommerce tracking.
-// These are thin wrappers around gtag() — no abstraction layer needed.
-
 type GtagEvent = {
   action: string;
   params?: Record<string, unknown>;
@@ -11,8 +8,6 @@ function sendEvent({ action, params }: GtagEvent) {
   if (typeof window.gtag !== "function") return;
   window.gtag("event", action, params);
 }
-
-// ── Ecommerce events ──
 
 export function trackViewItem(product: {
   id: string;

@@ -8,16 +8,12 @@ const featured = products.filter((p) => p.featured);
 export default function Home() {
   return (
     <>
-      {/* ── Hero ── */}
       <section className="flex flex-col items-center justify-center px-6 py-36 text-center sm:py-48 md:py-56">
-        <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
-          Silver &amp; Stone
-        </p>
-        <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
           SilvrStns
         </h1>
         <p className="mt-8 max-w-md text-base leading-relaxed text-text-muted sm:text-lg">
-          Minimal jewelry, crafted with intention. Designed to be worn every day.
+          Goth jewelry, crafted with intention. Designed to be worn every day.
         </p>
         <Link
           href="/shop"
@@ -27,7 +23,6 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* ── Featured Products ── */}
       <SectionWrapper className="py-24 sm:py-32">
         <div className="mb-14 flex items-end justify-between sm:mb-16">
           <div>
@@ -62,7 +57,6 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* ── Brand Story ── */}
       <section className="border-t border-border">
         <SectionWrapper className="py-28 sm:py-40">
           <div className="mx-auto max-w-xl text-center">

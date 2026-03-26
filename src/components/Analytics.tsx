@@ -2,16 +2,12 @@
 
 import Script from "next/script";
 
-// Loads GA4 and Microsoft Clarity scripts sitewide.
-// IDs are read from environment variables so they're easy to swap per environment.
-
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 export default function Analytics() {
   return (
     <>
-      {/* ── Google Analytics 4 ── */}
       {GA_ID && (
         <>
           <Script
@@ -29,7 +25,6 @@ export default function Analytics() {
         </>
       )}
 
-      {/* ── Microsoft Clarity ── */}
       {CLARITY_ID && (
         <Script id="clarity-init" strategy="afterInteractive">
           {`

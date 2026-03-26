@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <SectionWrapper className="py-24 sm:py-32">
-      {/* Header */}
       <div className="mb-20 max-w-xl sm:mb-24">
         <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-text-muted">
           About
@@ -21,12 +20,10 @@ export default function AboutPage() {
         </h1>
       </div>
 
-      {/* Content — two-column on desktop */}
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
         {/* Image placeholder */}
         <div className="aspect-[4/5] bg-surface" />
 
-        {/* Story */}
         <div className="flex flex-col justify-center lg:py-8">
           <h2 className="text-xl font-light tracking-tight sm:text-2xl md:text-3xl">
             Made to wear, not to show off.
