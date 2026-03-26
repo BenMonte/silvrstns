@@ -12,9 +12,6 @@ export default function Home() {
         <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
           SILVRSTNS
         </p>
-        <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-          SilvrStns
-        </h1>
         <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
           Goth jewelry, crafted with intention. Designed to be worn every day.
         </p>
