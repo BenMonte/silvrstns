@@ -40,7 +40,7 @@ export const products: Product[] = [
     fullDescription:
       "A classic signet shape reimagined with a smooth matte finish. Cast in solid sterling silver and hand-polished to a soft texture that catches light without glare. The flat face is left intentionally blank — no engraving, no emblem — just clean geometry you can wear every day. Fits comfortably on the pinky or ring finger.",
     category: "rings",
-    material: "Sterling Silver 925",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 12,
     featured: true,
   },
@@ -54,7 +54,7 @@ export const products: Product[] = [
     fullDescription:
       "An ultra-fine cable chain in sterling silver, finished at 18 inches with a small lobster clasp. The links are tight enough to feel solid but light enough to forget you're wearing it. Layers well under collars or pairs with a pendant. The kind of necklace you never take off.",
     category: "necklaces",
-    material: "Sterling Silver 925",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 24,
     featured: true,
   },
@@ -68,7 +68,7 @@ export const products: Product[] = [
     fullDescription:
       "A sleek open cuff bracelet with a flat profile and gently curved ends. Polished to a mirror-like finish on the outside, brushed matte on the inside for comfort. The opening allows for an adjustable fit that works across wrist sizes. Stacks well or wears alone as a quiet statement.",
     category: "bracelets",
-    material: "Sterling Silver 925",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 8,
     featured: true,
   },
@@ -82,7 +82,7 @@ export const products: Product[] = [
     fullDescription:
       "Miniature teardrop earrings featuring a natural grey labradorite stone set in a thin silver bezel. The stones are hand-selected for their subtle color shift — a flash of blue-grey when they catch the light. Lightweight enough to wear all day with a secure push-back closure.",
     category: "earrings",
-    material: "Sterling Silver 925, Labradorite",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 3,
     featured: false,
   },
@@ -96,7 +96,7 @@ export const products: Product[] = [
     fullDescription:
       "Two parallel bands connected by a slender bridge, creating a layered look in a single ring. Each band is individually rounded and polished. The gap between them adds visual depth without bulk. Designed to sit comfortably on the index or middle finger.",
     category: "rings",
-    material: "Sterling Silver 925",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 15,
     featured: false,
   },
@@ -110,7 +110,7 @@ export const products: Product[] = [
     fullDescription:
       "A 25mm horizontal bar pendant on a 20-inch fine cable chain. The bar has a polished front face and softly rounded edges that feel smooth against the skin. The proportions are deliberately understated — visible but never loud. Works equally well on its own or layered with the Thin Chain Necklace.",
     category: "necklaces",
-    material: "Sterling Silver 925",
+    material: "Sterling Silver, Zinc, Copper",
     inventory: 18,
     featured: true,
   },

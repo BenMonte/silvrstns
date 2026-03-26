@@ -5,6 +5,7 @@ import { products, getProductBySlug, getRelatedProducts, LOW_STOCK_THRESHOLD } f
 import SectionWrapper from "@/components/SectionWrapper";
 import ProductCard from "@/components/ProductCard";
 import AddToCartButton from "@/components/AddToCartButton";
+import BuyNowButton from "@/components/BuyNowButton";
 import ProductViewTracker from "@/components/ProductViewTracker";
 
 type Props = {
@@ -114,6 +115,15 @@ export default async function ProductPage({ params }: Props) {
             </div>
 
             <AddToCartButton
+              productId={product.id}
+              slug={product.slug}
+              name={product.name}
+              price={product.price}
+              material={product.material}
+              inventory={product.inventory}
+            />
+
+            <BuyNowButton
               productId={product.id}
               slug={product.slug}
               name={product.name}
