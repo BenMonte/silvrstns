@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Shop — SilvrStns",
-  description: "Browse the full SilvrStns collection of silver and stone jewelry.",
+  description: "Browse the full SilvrStns collection of silver jewelry.",
 };
 
 export default function ShopPage() {

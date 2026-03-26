@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 
-export default function CheckoutSuccessPage() {
+function SuccessContent() {
   const { clearCart } = useCart();
   const searchParams = useSearchParams();
   const [orderNumber, setOrderNumber] = useState<string | null>(null);
@@ -39,7 +39,7 @@ export default function CheckoutSuccessPage() {
       )}
       <p className="mt-8 max-w-md text-base leading-[1.8] text-text-muted">
         Your payment was successful. We&apos;ll start preparing your order
-        shortly. You should receive a confirmation email from Stripe.
+        shortly.
       </p>
       <Link
         href="/shop"
@@ -48,5 +48,13 @@ export default function CheckoutSuccessPage() {
         Continue Shopping
       </Link>
     </section>
+  );
+}
+
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense>
+      <SuccessContent />
+    </Suspense>
   );
 }
