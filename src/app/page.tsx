@@ -9,10 +9,13 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center px-6 py-36 text-center sm:py-48 md:py-56">
-        <h1 className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
+        <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
+          SILVRSTNS
+        </p>
+        <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
           SilvrStns
         </h1>
-        <p className="mt-8 max-w-md text-base leading-relaxed text-text-muted sm:text-lg">
+        <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
           Goth jewelry, crafted with intention. Designed to be worn every day.
         </p>
         <Link
