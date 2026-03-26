@@ -1,14 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 
 export default function CheckoutSuccessPage() {
   const { clearCart } = useCart();
+  const searchParams = useSearchParams();
+  const [orderNumber, setOrderNumber] = useState<string | null>(null);
 
   useEffect(() => {
     clearCart();
+
+    const sessionId = searchParams.get("session_id");
+    if (sessionId) {
+      fetch(`/api/checkout/session?session_id=${encodeURIComponent(sessionId)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.order_number) setOrderNumber(data.order_number);
+        })
+        .catch(() => {});
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -19,6 +32,11 @@ export default function CheckoutSuccessPage() {
       <h1 className="text-4xl font-light tracking-tight sm:text-5xl">
         Order Confirmed
       </h1>
+      {orderNumber && (
+        <p className="mt-5 text-[13px] uppercase tracking-[0.25em] text-text-muted">
+          Order {orderNumber}
+        </p>
+      )}
       <p className="mt-8 max-w-md text-base leading-[1.8] text-text-muted">
         Your payment was successful. We&apos;ll start preparing your order
         shortly. You should receive a confirmation email from Stripe.

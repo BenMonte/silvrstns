@@ -40,13 +40,18 @@ export async function POST(request: Request) {
       };
     });
 
+    // generate a short order number: SS + 5 random digits
+    const orderNumber = `SS${String(Math.floor(10000 + Math.random() * 90000))}`;  
+
     // need the origin for redirect urls — falls back to env var for production
     const origin = request.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "";
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
-      success_url: `${origin}/checkout/success`,
+      metadata: { order_number: orderNumber },
+      client_reference_id: orderNumber,
+      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout/cancel`,
     });
 
