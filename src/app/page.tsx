@@ -8,7 +8,7 @@ const featured = products.filter((p) => p.featured);
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center px-6 py-36 text-center sm:py-48 md:py-56">
+      <section className="flex flex-col items-center justify-center px-6 pb-20 pt-36 text-center sm:pb-28 sm:pt-48 md:pt-56">
         <p className="mb-3 text-[11px] uppercase tracking-[0.4em] text-text-muted">
           SILVRSTNS
         </p>
@@ -23,7 +23,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <SectionWrapper className="py-24 sm:py-32">
+      <SectionWrapper className="py-16 sm:py-20">
         <div className="mb-14 flex items-end justify-between sm:mb-16">
           <div>
             <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-text-muted">

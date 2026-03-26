@@ -24,6 +24,9 @@ export default function Footer() {
             <Link href="/contact" className="text-xs uppercase tracking-[0.15em] text-text-muted transition-colors duration-300 hover:text-text">
               Contact
             </Link>
+            <Link href="/shipping" className="text-xs uppercase tracking-[0.15em] text-text-muted transition-colors duration-300 hover:text-text">
+              Shipping
+            </Link>
           </div>
         </div>
 
