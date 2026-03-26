@@ -34,6 +34,7 @@ export default function CartDrawer() {
         body: JSON.stringify({
           items: items.map((i) => ({
             productId: i.productId,
+            size: i.size,
             quantity: i.quantity,
           })),
         }),
@@ -112,7 +113,7 @@ export default function CartDrawer() {
                   const atMax = item.quantity >= maxQty;
 
                   return (
-                  <li key={item.productId} className="flex gap-4">
+                  <li key={`${item.productId}-${item.size}`} className="flex gap-4">
                     {/* Image placeholder */}
                     <Link
                       href={`/shop/${item.slug}`}
@@ -130,7 +131,7 @@ export default function CartDrawer() {
                           {item.name}
                         </Link>
                         <p className="mt-0.5 text-xs text-text-muted">
-                          {item.material}
+                          {item.material} · {item.size}
                         </p>
                       </div>
 
@@ -139,9 +140,10 @@ export default function CartDrawer() {
                           <button
                             onClick={() =>
                               item.quantity <= 1
-                                ? removeItem(item.productId)
+                                ? removeItem(item.productId, item.size)
                                 : updateQuantity(
                                     item.productId,
+                                    item.size,
                                     item.quantity - 1
                                   )
                             }
@@ -156,7 +158,7 @@ export default function CartDrawer() {
                           <button
                             disabled={atMax}
                             onClick={() =>
-                              updateQuantity(item.productId, item.quantity + 1)
+                              updateQuantity(item.productId, item.size, item.quantity + 1)
                             }
                             className="flex h-7 w-7 items-center justify-center border border-border text-xs text-text-muted transition-colors hover:border-accent hover:text-text disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-border disabled:hover:text-text-muted"
                             aria-label="Increase quantity"
@@ -175,7 +177,7 @@ export default function CartDrawer() {
                     </div>
 
                     <button
-                      onClick={() => removeItem(item.productId)}
+                      onClick={() => removeItem(item.productId, item.size)}
                       className="self-start text-text-muted/50 transition-colors hover:text-text"
                       aria-label={`Remove ${item.name}`}
                     >

@@ -21,6 +21,19 @@ export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }
 
+export function getSizesForCategory(category: Product["category"]): string[] {
+  switch (category) {
+    case "rings":
+      return ["7 in.", "8 in.", "9 in.", "10 in."];
+    case "bracelets":
+      return ["7 in.", "8 in."];
+    case "necklaces":
+      return ["20 in."];
+    default:
+      return ["One Size"];
+  }
+}
+
 // tries same category first, then fills with other products if needed
 export function getRelatedProducts(product: Product, limit = 4): Product[] {
   return products
@@ -52,7 +65,7 @@ export const products: Product[] = [
     shortDescription:
       "Delicate silver chain with a minimal clasp.",
     fullDescription:
-      "An ultra-fine cable chain in sterling silver, finished at 18 inches with a small lobster clasp. The links are tight enough to feel solid but light enough to forget you're wearing it. Layers well under collars or pairs with a pendant. The kind of necklace you never take off.",
+      "An ultra-fine cable chain in sterling silver, finished at 20 inches with a small lobster clasp. The links are tight enough to feel solid but light enough to forget you're wearing it. Layers well under collars or pairs with a pendant. The kind of necklace you never take off.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     inventory: 24,

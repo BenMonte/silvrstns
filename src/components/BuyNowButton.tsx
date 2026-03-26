@@ -9,6 +9,7 @@ type Props = {
   name: string;
   price: number;
   material: string;
+  size: string;
   inventory: number;
 };
 
@@ -18,6 +19,7 @@ export default function BuyNowButton({
   name,
   price,
   material,
+  size,
   inventory,
 }: Props) {
   const { addItem, items } = useCart();
@@ -27,9 +29,9 @@ export default function BuyNowButton({
 
   async function handleBuyNow() {
     // ensure item is in cart
-    const inCart = items.find((i) => i.productId === productId);
+    const inCart = items.find((i) => i.productId === productId && i.size === size);
     if (!inCart) {
-      addItem({ productId, slug, name, price, material });
+      addItem({ productId, slug, name, price, material, size });
     }
 
     setLoading(true);
@@ -38,7 +40,7 @@ export default function BuyNowButton({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          items: [{ productId, quantity: inCart ? inCart.quantity : 1 }],
+          items: [{ productId, size, quantity: inCart ? inCart.quantity : 1 }],
         }),
       });
       const data = await res.json();

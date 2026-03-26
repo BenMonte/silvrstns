@@ -15,7 +15,7 @@ export default function CheckoutCancelPage() {
         Payment Cancelled
       </h1>
       <p className="mt-8 max-w-md text-base leading-[1.8] text-text-muted">
-        Your checkout was cancelled — no payment was taken. Your cart items are
+        Your checkout was cancelled, you&apos;re payment method was not charged . Your cart items are
         still saved if you&apos;d like to try again.
       </p>
       <Link

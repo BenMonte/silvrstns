@@ -16,14 +16,19 @@ export type CartItem = {
   name: string;
   price: number;
   material: string;
+  size: string;
   quantity: number;
 };
+
+function cartKey(item: { productId: string; size: string }) {
+  return `${item.productId}::${item.size}`;
+}
 
 type CartContextValue = {
   items: CartItem[];
   addItem: (item: Omit<CartItem, "quantity">, qty?: number) => void;
-  removeItem: (productId: string) => void;
-  updateQuantity: (productId: string, qty: number) => void;
+  removeItem: (productId: string, size: string) => void;
+  updateQuantity: (productId: string, size: string, qty: number) => void;
   clearCart: () => void;
   itemCount: number;
   subtotal: number;
@@ -63,14 +68,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const maxQty = product?.inventory ?? 0;
       if (maxQty <= 0) return;
 
+      const key = cartKey(item);
+
       setItems((prev) => {
-        const existing = prev.find((i) => i.productId === item.productId);
+        const existing = prev.find((i) => cartKey(i) === key);
         if (existing) {
           const newQty = Math.min(existing.quantity + qty, maxQty);
           return prev.map((i) =>
-            i.productId === item.productId
-              ? { ...i, quantity: newQty }
-              : i
+            cartKey(i) === key ? { ...i, quantity: newQty } : i
           );
         }
         return [...prev, { ...item, quantity: Math.min(qty, maxQty) }];
@@ -80,18 +85,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     []
   );
 
-  const removeItem = useCallback((productId: string) => {
-    setItems((prev) => prev.filter((i) => i.productId !== productId));
+  const removeItem = useCallback((productId: string, size: string) => {
+    const key = cartKey({ productId, size });
+    setItems((prev) => prev.filter((i) => cartKey(i) !== key));
   }, []);
 
-  const updateQuantity = useCallback((productId: string, qty: number) => {
+  const updateQuantity = useCallback((productId: string, size: string, qty: number) => {
     if (qty < 1) return;
     const product = getProductById(productId);
     const maxQty = product?.inventory ?? 0;
     const capped = Math.min(qty, maxQty);
+    const key = cartKey({ productId, size });
     setItems((prev) =>
       prev.map((i) =>
-        i.productId === productId ? { ...i, quantity: capped } : i
+        cartKey(i) === key ? { ...i, quantity: capped } : i
       )
     );
   }, []);

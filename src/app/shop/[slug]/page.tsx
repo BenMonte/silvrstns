@@ -4,8 +4,7 @@ import Link from "next/link";
 import { products, getProductBySlug, getRelatedProducts, LOW_STOCK_THRESHOLD } from "@/data/products";
 import SectionWrapper from "@/components/SectionWrapper";
 import ProductCard from "@/components/ProductCard";
-import AddToCartButton from "@/components/AddToCartButton";
-import BuyNowButton from "@/components/BuyNowButton";
+import ProductActions from "@/components/ProductActions";
 import ProductViewTracker from "@/components/ProductViewTracker";
 
 type Props = {
@@ -101,36 +100,7 @@ export default async function ProductPage({ params }: Props) {
               {product.fullDescription}
             </p>
 
-            <div className="mt-10 border-t border-border pt-8">
-              <div className="space-y-4">
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-text-muted">Material</span>
-                  <span className="text-text">{product.material}</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-text-muted">Category</span>
-                  <span className="capitalize text-text">{product.category}</span>
-                </div>
-              </div>
-            </div>
-
-            <AddToCartButton
-              productId={product.id}
-              slug={product.slug}
-              name={product.name}
-              price={product.price}
-              material={product.material}
-              inventory={product.inventory}
-            />
-
-            <BuyNowButton
-              productId={product.id}
-              slug={product.slug}
-              name={product.name}
-              price={product.price}
-              material={product.material}
-              inventory={product.inventory}
-            />
+            <ProductActions product={product} />
           </div>
         </div>
       </SectionWrapper>

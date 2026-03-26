@@ -9,6 +9,7 @@ type Props = {
   name: string;
   price: number;
   material: string;
+  size: string;
   inventory: number;
 };
 
@@ -18,12 +19,13 @@ export default function AddToCartButton({
   name,
   price,
   material,
+  size,
   inventory,
 }: Props) {
   const { addItem, items } = useCart();
 
   const soldOut = inventory === 0;
-  const inCart = items.find((i) => i.productId === productId)?.quantity ?? 0;
+  const inCart = items.find((i) => i.productId === productId && i.size === size)?.quantity ?? 0;
   const atMax = inCart >= inventory;
 
   let label = "Add to Cart";
@@ -34,7 +36,7 @@ export default function AddToCartButton({
     <button
       disabled={soldOut || atMax}
       onClick={() => {
-        addItem({ productId, slug, name, price, material });
+        addItem({ productId, slug, name, price, material, size });
         trackAddToCart({ id: productId, name, price });
       }}
       className="mt-12 w-full border border-border py-4 text-[13px] uppercase tracking-[0.2em] text-text transition-all duration-300 hover:border-accent hover:text-accent-hover disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-border disabled:hover:text-text sm:w-auto sm:px-16"

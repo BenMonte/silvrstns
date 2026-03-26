@@ -4,6 +4,7 @@ import { products } from "@/data/products";
 
 type CartLineItem = {
   productId: string;
+  size: string;
   quantity: number;
 };
 
@@ -27,12 +28,13 @@ export async function POST(request: Request) {
       if (!product) {
         throw new Error("Product not found");
       }
+      const size = item.size || "One Size";
       return {
         price_data: {
           currency: "usd",
           product_data: {
             name: product.name,
-            description: product.shortDescription,
+            description: `${product.shortDescription} — Size: ${size}`,
           },
           unit_amount: Math.round(product.price * 100),
         },
@@ -41,7 +43,13 @@ export async function POST(request: Request) {
     });
 
     // generate a short order number: SS + 5 random digits
-    const orderNumber = `SS${String(Math.floor(10000 + Math.random() * 90000))}`;  
+    const orderNumber = `SS${String(Math.floor(10000 + Math.random() * 90000))}`;
+
+    // build a compact sizes summary for metadata
+    const sizesSummary = items.map((item) => {
+      const product = products.find((p) => p.id === item.productId);
+      return `${product?.name ?? item.productId}: ${item.size || "One Size"}`;
+    }).join(" | ");
 
     // need the origin for redirect urls — falls back to env var for production
     const origin = request.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "";
@@ -49,7 +57,7 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
-      metadata: { order_number: orderNumber },
+      metadata: { order_number: orderNumber, sizes: sizesSummary },
       client_reference_id: orderNumber,
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU"],
