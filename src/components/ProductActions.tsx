@@ -28,23 +28,19 @@ export default function ProductActions({ product }: Props) {
           </div>
           <div className="flex items-center justify-between text-[13px]">
             <span className="text-text-muted">
-              {hasMultipleSizes ? "Size (in.)" : "Size"}
+              {hasMultipleSizes ? "Sizes (in.)" : "Size"}
             </span>
-            {hasMultipleSizes ? (
-              <select
-                value={selectedSize}
-                onChange={(e) => setSelectedSize(e.target.value)}
-                className="appearance-none bg-transparent text-right text-[13px] text-text outline-none cursor-pointer border border-border px-3 py-1.5 transition-colors hover:border-accent focus:border-accent"
-              >
-                {sizes.map((s) => (
-                  <option key={s} value={s} className="bg-bg text-text">
-                    {s}
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <span className="text-text">{sizes[0]}</span>
-            )}
+            <select
+              value={selectedSize}
+              onChange={(e) => setSelectedSize(e.target.value)}
+              className="appearance-none bg-transparent text-right text-[13px] text-text outline-none cursor-pointer border border-border px-3 py-1.5 transition-colors hover:border-accent focus:border-accent"
+            >
+              {sizes.map((s) => (
+                <option key={s} value={s} className="bg-bg text-text">
+                  {s}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>
