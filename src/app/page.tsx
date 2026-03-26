@@ -1,65 +1,92 @@
-import Image from "next/image";
+import Link from "next/link";
+import SectionWrapper from "@/components/SectionWrapper";
+import ProductCard from "@/components/ProductCard";
+import { products } from "@/data/products";
+
+const featured = products.filter((p) => p.featured);
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      {/* ── Hero ── */}
+      <section className="flex flex-col items-center justify-center px-6 py-36 text-center sm:py-48 md:py-56">
+        <p className="mb-6 text-[11px] uppercase tracking-[0.4em] text-text-muted">
+          Silver &amp; Stone
+        </p>
+        <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+          SilvrStns
+        </h1>
+        <p className="mt-8 max-w-md text-base leading-relaxed text-text-muted sm:text-lg">
+          Minimal jewelry, crafted with intention. Designed to be worn every day.
+        </p>
+        <Link
+          href="/shop"
+          className="mt-12 inline-block border border-border px-10 py-4 text-[13px] uppercase tracking-[0.2em] text-text transition-all duration-300 hover:border-accent hover:text-accent-hover"
+        >
+          Shop the Collection
+        </Link>
+      </section>
+
+      {/* ── Featured Products ── */}
+      <SectionWrapper className="py-24 sm:py-32">
+        <div className="mb-14 flex items-end justify-between sm:mb-16">
+          <div>
+            <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-text-muted">
+              Featured
+            </p>
+            <h2 className="text-2xl font-light tracking-tight sm:text-3xl">
+              Selected Pieces
+            </h2>
+          </div>
+          <Link
+            href="/shop"
+            className="hidden text-[13px] text-text-muted transition-colors duration-300 hover:text-text sm:block"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            View all &rarr;
+          </Link>
         </div>
-      </main>
-    </div>
+
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
+          {featured.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+
+        <div className="mt-10 text-center sm:hidden">
+          <Link
+            href="/shop"
+            className="text-[13px] text-text-muted transition-colors duration-300 hover:text-text"
+          >
+            View all &rarr;
+          </Link>
+        </div>
+      </SectionWrapper>
+
+      {/* ── Brand Story ── */}
+      <section className="border-t border-border">
+        <SectionWrapper className="py-28 sm:py-40">
+          <div className="mx-auto max-w-xl text-center">
+            <p className="mb-4 text-[11px] uppercase tracking-[0.3em] text-text-muted">
+              Our Philosophy
+            </p>
+            <h2 className="text-2xl font-light tracking-tight sm:text-3xl md:text-4xl">
+              Less, but better.
+            </h2>
+            <p className="mt-8 text-base leading-[1.8] text-text-muted">
+              SilvrStns started with a simple idea: jewelry shouldn&apos;t compete
+              for attention — it should complete what you&apos;re already wearing.
+              Every piece is designed to be quiet, durable, and intentionally
+              minimal.
+            </p>
+            <Link
+              href="/about"
+              className="mt-10 inline-block text-[13px] text-accent transition-colors duration-300 hover:text-accent-hover"
+            >
+              Read more about us &rarr;
+            </Link>
+          </div>
+        </SectionWrapper>
+      </section>
+    </>
   );
 }
