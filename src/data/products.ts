@@ -900,6 +900,21 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    id: "stone-glasses",
+    slug: "stone-glasses",
+    name: "Stone Glasses",
+    price: 150,
+    shortDescription:
+      "Sunglasses with stone-grey tinted lenses.",
+    fullDescription:
+      "A pair of sunglasses finished in a cool stone-grey tone with clean metal frames. The subtle tint keeps visibility clear while cutting glare, and the frame shape stays sharp without feeling heavy. UV-protective lenses and a balanced fit make them easy for everyday wear.",
+    category: "glasses",
+    material: "Sterling Silver, Zinc, Copper, Glass",
+    images: ["/products/glasses/stone-glasses-1.jpeg", "/products/glasses/stone-glasses-2.jpeg", "/products/glasses/stone-glasses-3.jpeg"],
+    inventory: 9,
+    featured: true,
+  },
+  {
     id: "chrome-hairclip",
     slug: "chrome-hairclip",
     name: "Chrome Hairclip",
