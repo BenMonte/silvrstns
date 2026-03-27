@@ -5,6 +5,7 @@ import { products, getProductBySlug, getRelatedProducts, LOW_STOCK_THRESHOLD } f
 import SectionWrapper from "@/components/SectionWrapper";
 import ProductCard from "@/components/ProductCard";
 import ProductActions from "@/components/ProductActions";
+import ProductImageGallery from "@/components/ProductImageGallery";
 import ProductViewTracker from "@/components/ProductViewTracker";
 
 type Props = {
@@ -62,24 +63,7 @@ export default async function ProductPage({ params }: Props) {
         </nav>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="space-y-3">
-            <div className="aspect-[3/4] overflow-hidden bg-surface">
-              <div className="flex h-full w-full items-center justify-center">
-                <span className="text-[11px] uppercase tracking-[0.25em] text-text-muted/20">
-                  Product Image
-                </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-4 gap-3">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="aspect-square bg-surface-light transition-opacity duration-300 hover:opacity-80 cursor-pointer"
-                />
-              ))}
-            </div>
-          </div>
+          <ProductImageGallery images={product.images} name={product.name} />
 
           <div className="flex flex-col justify-center lg:py-8">
             <p className="mb-4 text-[11px] uppercase tracking-[0.3em] text-text-muted">

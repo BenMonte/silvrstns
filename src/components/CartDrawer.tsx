@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { getProductById } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/analytics";
+import Image from "next/image";
 
 export default function CartDrawer() {
   const {
@@ -114,12 +115,21 @@ export default function CartDrawer() {
 
                   return (
                   <li key={`${item.productId}-${item.size}`} className="flex gap-4">
-                    {/* Image placeholder */}
                     <Link
                       href={`/shop/${item.slug}`}
                       onClick={closeDrawer}
-                      className="block h-20 w-16 flex-shrink-0 rounded-sm bg-surface"
-                    />
+                      className="relative block h-20 w-16 flex-shrink-0 rounded-sm bg-surface overflow-hidden"
+                    >
+                      {product?.images?.[0] && (
+                        <Image
+                          src={product.images[0]}
+                          alt={item.name}
+                          fill
+                          sizes="64px"
+                          className="object-cover"
+                        />
+                      )}
+                    </Link>
 
                     <div className="flex flex-1 flex-col justify-between">
                       <div>
@@ -131,7 +141,7 @@ export default function CartDrawer() {
                           {item.name}
                         </Link>
                         <p className="mt-0.5 text-xs text-text-muted">
-                          {item.material} · {item.size}
+                          Size: {item.size}
                         </p>
                       </div>
 
