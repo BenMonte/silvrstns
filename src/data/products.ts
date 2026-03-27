@@ -674,4 +674,334 @@ export const products: Product[] = [
     inventory: 12,
     featured: true,
   },
+  {
+    id: "avern-earrings",
+    slug: "avern-earrings",
+    name: "Avern Earrings",
+    price: 60,
+    shortDescription:
+      "Minimalist drop earrings with clean geometry.",
+    fullDescription:
+      "A pair of sterling silver drop earrings with a simple geometric form. The sleek silhouette catches light while maintaining an understated presence. Lightweight and comfortable for all-day wear with secure posts and backs.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/avern-earrings-1.jpeg", "/products/earrings/avern-earrings-2.jpeg"],
+    inventory: 18,
+    featured: false,
+  },
+  {
+    id: "bullet-earrings",
+    slug: "bullet-earrings",
+    name: "Bullet Earrings",
+    price: 60,
+    shortDescription:
+      "Miniature silver bullets as statement earrings.",
+    fullDescription:
+      "A pair of sterling silver earrings modeled after rifle cartridges — tapered at the tip with flat bases and smooth cylindrical bodies. The proportions are exact enough to read immediately but scaled down to earring size. Hung from secure posts that sit comfortably on the ear.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/bullet-earrings-1.jpeg", "/products/earrings/bullet-earrings-2.jpeg", "/products/earrings/bullet-earrings-3.jpeg"],
+    inventory: 12,
+    featured: true,
+  },
+  {
+    id: "cinder-earrings",
+    slug: "cinder-earrings",
+    name: "Cinder Earrings",
+    price: 60,
+    shortDescription:
+      "Dark drop earrings with a textured surface.",
+    fullDescription:
+      "A pair of oxidized sterling silver drop earrings with a deliberately weathered, ash-like finish. The textured surface catches minimal light, creating a dark, understated presence. Elegant simplicity with an edge.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/cinder-earrings-1.jpeg", "/products/earrings/cinder-earrings-2.jpeg"],
+    inventory: 14,
+    featured: false,
+  },
+  {
+    id: "cross-earrings",
+    slug: "cross-earrings",
+    name: "Cross Earrings",
+    price: 60,
+    shortDescription:
+      "Gothic cross earrings with squared-off detail.",
+    fullDescription:
+      "A pair of sterling silver earrings featuring small raised crosses on each piece. The crosses have squared-off arms and oxidized detailing that adds depth and shadow. A subtle gothic statement for the ear.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/cross-earrings-1.jpeg", "/products/earrings/cross-earrings-2.jpeg"],
+    inventory: 10,
+    featured: true,
+  },
+  {
+    id: "crowne-earrings",
+    slug: "crowne-earrings",
+    name: "Crowne Earrings",
+    price: 60,
+    shortDescription:
+      "Crown-inspired earrings with regal geometry.",
+    fullDescription:
+      "A pair of sterling silver earrings shaped like miniature crowns with pointed peaks. The form is geometric and precise, with a polished finish that catches light. A piece that carries presence without excess.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/crowne-earrings-1.jpeg", "/products/earrings/crowne-earrings-2.jpeg"],
+    inventory: 15,
+    featured: false,
+  },
+  {
+    id: "crucifer-earrings",
+    slug: "crucifer-earrings",
+    name: "Crucifer Earrings",
+    price: 60,
+    shortDescription:
+      "Raised cross earrings with a dark gothic edge.",
+    fullDescription:
+      "A pair of sterling silver earrings featuring prominent raised crosses. The crosses have squared-off ends and deliberate weight — gothic without being theatrical. Oxidized detailing in the recesses adds dimension.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/crucifer-earrings-1.jpeg", "/products/earrings/crucifer-earrings-2.jpeg"],
+    inventory: 12,
+    featured: true,
+  },
+  {
+    id: "fishtail-earrings",
+    slug: "fishtail-earrings",
+    name: "Fishtail Earrings",
+    price: 60,
+    shortDescription:
+      "Sculpted earrings with a split fishtail form.",
+    fullDescription:
+      "A pair of sterling silver earrings featuring a tapered split band that fans out into a subtle fishtail shape. The forked ends create a sense of movement while keeping the profile slim. Polished with clean edges that catch light.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/fishtail-earrings-1.jpeg", "/products/earrings/fishtail-earrings-2.jpeg"],
+    inventory: 14,
+    featured: false,
+  },
+  {
+    id: "gloam-earrings",
+    slug: "gloam-earrings",
+    name: "Gloam Earrings",
+    price: 60,
+    shortDescription:
+      "Twilight-inspired earrings with soft oxidation.",
+    fullDescription:
+      "A pair of sterling silver earrings with an oxidized finish that mimics the dim light of twilight. The surface has a matte quality that barely reflects — present but not bright. A subtle, contemplative piece.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/gloam-earrings-1.jpeg", "/products/earrings/gloam-earrings-2.jpeg"],
+    inventory: 11,
+    featured: true,
+  },
+  {
+    id: "heart-earrings",
+    slug: "heart-earrings",
+    name: "Heart Earrings",
+    price: 60,
+    shortDescription:
+      "Dark-finished heart earrings with anatomical detail.",
+    fullDescription:
+      "A pair of sterling silver heart earrings with an anatomical lean — textured surface and oxidized recesses that give them depth. Not sentimental, not simple. A romantic symbol recast through a darker lens.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/heart-earrings-1.jpeg", "/products/earrings/heart-earrings-2.jpeg"],
+    inventory: 13,
+    featured: false,
+  },
+  {
+    id: "lily-earrings",
+    slug: "lily-earrings",
+    name: "Lily Earrings",
+    price: 60,
+    shortDescription:
+      "Delicate lily flower earrings in sterling silver.",
+    fullDescription:
+      "A pair of sterling silver earrings sculpted into lily flowers with softly curving petals that fan out from a central point. The detail is botanical but restrained — enough to read as a flower without being decorative. Quiet, dark-romantic presence.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/lily-earrings-1.jpeg", "/products/earrings/lily-earrings-2.jpeg"],
+    inventory: 16,
+    featured: true,
+  },
+  {
+    id: "skull-earrings",
+    slug: "skull-earrings",
+    name: "Skull Earrings",
+    price: 60,
+    shortDescription:
+      "Miniature skull earrings with clean details.",
+    fullDescription:
+      "A pair of sterling silver earrings shaped into miniature skulls with defined bone structure and hollow eye sockets. The form is deliberately bold — dark and unapologetic without being cartoonish. A classic statement piece.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/skull-earrings-1.jpeg", "/products/earrings/skull-earrings-2.jpeg"],
+    inventory: 10,
+    featured: false,
+  },
+  {
+    id: "skullman-earrings",
+    slug: "skullman-earrings",
+    name: "Skullman Earrings",
+    price: 60,
+    shortDescription:
+      "Detailed skull earrings with hollow eyes.",
+    fullDescription:
+      "A pair of sterling silver skull earrings with deep-set hollow eye sockets and defined bone structure. The jaw is slightly open, and the cranium carries fine surface detail that rewards a closer look. Oxidized in the recesses for depth. Dark, deliberate, and unapologetically bold.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/skullman-earrings-1.jpeg", "/products/earrings/skullman-earrings-2.jpeg"],
+    inventory: 8,
+    featured: true,
+  },
+  {
+    id: "star-earrings",
+    slug: "star-earrings",
+    name: "Star Earrings",
+    price: 60,
+    shortDescription:
+      "Star-shaped earrings with flat-cut detail.",
+    fullDescription:
+      "A pair of sterling silver earrings shaped into stars with flat-cut faces that catch and scatter light. Each star is polished to a high sheen with defined points. Lightweight and easy to wear — a subtle cosmic touch.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/star-earrings-1.jpeg", "/products/earrings/star-earrings-2.jpeg"],
+    inventory: 17,
+    featured: false,
+  },
+  {
+    id: "thorn-earrings",
+    slug: "thorn-earrings",
+    name: "Thorn Earrings",
+    price: 60,
+    shortDescription:
+      "Sharp thorn-shaped earrings with pointed tips.",
+    fullDescription:
+      "A pair of sterling silver earrings shaped like thorns with sharp, tapered points. The form is sleek and aggressive but remains refined in scale. Polished to a cold sheen with clean edges — nature's edge in wearable form.",
+    category: "earrings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/earrings/thorn-earrings-1.jpeg", "/products/earrings/thorn-earrings-2.jpeg"],
+    inventory: 12,
+    featured: false,
+  },
+  {
+    id: "ash-glasses",
+    slug: "ash-glasses",
+    name: "Ash Glasses",
+    price: 150,
+    shortDescription:
+      "Minimalist sunglasses with ash-grey frames.",
+    fullDescription:
+      "A pair of sterling silver-tinted sunglasses with a clean, geometric frame design. The ash-grey tone gives the lenses a cool, neutral quality that works with any outfit. UV-protective lenses set into sleek metal frames designed to sit comfortably and look intentional.",
+    category: "glasses",
+    material: "Sterling Silver, Zinc, Copper, Glass",
+    images: ["/products/glasses/ash-glasses-1.jpeg", "/products/glasses/ash-glasses-2.jpeg", "/products/glasses/ash-glasses-3.jpeg", "/products/glasses/ash-glasses-4.jpeg"],
+    inventory: 8,
+    featured: true,
+  },
+  {
+    id: "slate-glasses",
+    slug: "slate-glasses",
+    name: "Slate Glasses",
+    price: 150,
+    shortDescription:
+      "Sunglasses with slate-dark tinted lenses.",
+    fullDescription:
+      "A pair of sunglasses with deep slate-grey lenses and metal frames. The dark lens color provides excellent UV protection while maintaining a minimalist aesthetic. The frame design is architectural and precise — modern without being minimal.",
+    category: "glasses",
+    material: "Sterling Silver, Zinc, Copper, Glass",
+    images: ["/products/glasses/slate-glasses-1.jpeg", "/products/glasses/slate-glasses-2.jpeg", "/products/glasses/slate-glasses-3.jpeg", "/products/glasses/slate-glasses-4.jpeg"],
+    inventory: 10,
+    featured: false,
+  },
+  {
+    id: "stone-glasses",
+    slug: "stone-glasses",
+    name: "Stone Glasses",
+    price: 150,
+    shortDescription:
+      "Sunglasses with stone-grey lens tint.",
+    fullDescription:
+      "A pair of sunglasses featuring stone-grey tinted lenses with a neutral, earthy tone. The lenses provide full UV protection while maintaining excellent visibility. The frame is constructed from lightweight metal with a comfortable fit designed for extended wear.",
+    category: "glasses",
+    material: "Sterling Silver, Zinc, Copper, Glass",
+    images: ["/products/glasses/stone-glasses-1.jpeg", "/products/glasses/stone-glasses-2.jpeg", "/products/glasses/stone-glasses-3.jpeg"],
+    inventory: 12,
+    featured: true,
+  },
+  {
+    id: "chrome-hairclip",
+    slug: "chrome-hairclip",
+    name: "Chrome Hairclip",
+    price: 40,
+    shortDescription:
+      "Metallic hairclip with a polished chrome finish.",
+    fullDescription:
+      "A sleek hairclip with a polished chrome finish that reflects light cleanly. The design is minimalist and geometric, holding hair securely while maintaining an aesthetic edge. A small accessory that carries intention.",
+    category: "accessories",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/accessories/chrome-hairclip-1.jpeg", "/products/accessories/chrome-hairclip-2.jpeg"],
+    inventory: 16,
+    featured: false,
+  },
+  {
+    id: "crowne-hairtie",
+    slug: "crowne-hairtie",
+    name: "Crowne Hairtie",
+    price: 35,
+    shortDescription:
+      "Hair tie with crown-inspired metallic detail.",
+    fullDescription:
+      "A hair tie featuring a crown-shaped metallic accent in sterling silver. The geometric crown design adds a touch of regal detail to an otherwise simple accessory. Functional and decorative — a small statement piece.",
+    category: "accessories",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/accessories/crowne-hairtie-1.jpeg", "/products/accessories/crowne-hairtie-2.jpeg"],
+    inventory: 20,
+    featured: true,
+  },
+  {
+    id: "riven-keychain",
+    slug: "riven-keychain",
+    name: "Riven Keychain",
+    price: 40,
+    shortDescription:
+      "A split-form keychain in sterling silver.",
+    fullDescription:
+      "A small sterling silver keychain with a split, tapered form inspired by broken stone. The design is sculptural and minimal — functional enough to hold keys while carrying aesthetic weight. A piece that works as well as it looks.",
+    category: "accessories",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/accessories/riven-keychain-1.jpeg", "/products/accessories/riven-keychain-2.jpeg"],
+    inventory: 14,
+    featured: false,
+  },
+  {
+    id: "skullman-keychain",
+    slug: "skullman-keychain",
+    name: "Skullman Keychain",
+    price: 45,
+    shortDescription:
+      "A detailed skull keychain with hollow eyes.",
+    fullDescription:
+      "A sterling silver keychain shaped into a detailed skull with deep-set hollow eye sockets and defined bone structure. The jaw is slightly open, and the cranium carries fine surface detail. Oxidized in the recesses for depth. Dark and deliberate — a keychain that makes a statement.",
+    category: "accessories",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/accessories/skullman-keychain-1.jpeg", "/products/accessories/skullman-keychain-2.jpeg", "/products/accessories/skullman-keychain-3.jpeg"],
+    inventory: 11,
+    featured: true,
+  },
+  {
+    id: "star-hairtie",
+    slug: "star-hairtie",
+    name: "Star Hairtie",
+    price: 35,
+    shortDescription:
+      "Hair tie with star-shaped metallic accent.",
+    fullDescription:
+      "A hair tie featuring a star-shaped metallic accent in polished sterling silver. The star design catches light as it moves through hair, adding subtle sparkle to an everyday accessory. Functional and decorative without being overdone.",
+    category: "accessories",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/accessories/star-hairtie-1.jpeg", "/products/accessories/star-hairtie-2.jpeg"],
+    inventory: 18,
+    featured: false,
+  },
 ];
