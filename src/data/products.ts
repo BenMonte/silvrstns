@@ -105,19 +105,109 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    id: "thin-chain-necklace",
-    slug: "thin-chain-necklace",
-    name: "Thin Chain Necklace",
+    id: "dagger-necklace",
+    slug: "dagger-necklace",
+    name: "Dagger Necklace",
     price: 80,
     shortDescription:
-      "Delicate silver chain with a minimal clasp.",
+      "A sharp dagger pendant on a fine silver chain.",
     fullDescription:
-      "An ultra-fine cable chain in sterling silver, finished at 20 inches with a small lobster clasp. The links are tight enough to feel solid but light enough to forget you're wearing it. Layers well under collars or pairs with a pendant. The kind of necklace you never take off.",
+      "A miniature dagger pendant cast in sterling silver, hung from a 20-inch cable chain. The blade is detailed with a center ridge and tapered point, while the hilt features a subtle crossguard. The pendant sits flat against the chest with enough weight to stay in place. A piece that carries edge without excess.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: [],
-    inventory: 24,
+    inventory: 14,
     featured: true,
+  },
+  {
+    id: "lily-necklace",
+    slug: "lily-necklace",
+    name: "Lily Necklace",
+    price: 80,
+    shortDescription:
+      "A delicate lily pendant with organic silver detail.",
+    fullDescription:
+      "A sterling silver lily pendant with softly curved petals that fan out from a central stem. The flower is sculpted with just enough detail to read as botanical without being literal. Hung from a 20-inch fine chain with a lobster clasp. Sits gracefully at the collarbone — feminine with a dark-romantic edge.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 12,
+    featured: true,
+  },
+  {
+    id: "rolo-chain",
+    slug: "rolo-chain",
+    name: "Rolo Chain",
+    price: 80,
+    shortDescription:
+      "A classic rolo-link chain with uniform round links.",
+    fullDescription:
+      "A 20-inch rolo chain in sterling silver with evenly spaced circular links. Each link is soldered closed for durability and polished to a soft sheen. The gauge is heavy enough to wear alone but slim enough to layer under a collar. A foundational piece that works with everything.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 20,
+    featured: false,
+  },
+  {
+    id: "knight-chain",
+    slug: "knight-chain",
+    name: "Knight Chain",
+    price: 80,
+    shortDescription:
+      "A heavy-linked chain with a medieval presence.",
+    fullDescription:
+      "A sterling silver chain with elongated interlocking links that evoke chainmail armor. The links are flat and wide, giving the chain a structured drape that sits close to the neck. Finished at 20 inches with a heavy-duty clasp built to match the chain's weight. Designed to be seen, not hidden.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 10,
+    featured: true,
+  },
+  {
+    id: "star-chain",
+    slug: "star-chain",
+    name: "Star Chain",
+    price: 80,
+    shortDescription:
+      "A fine chain with small star-shaped links.",
+    fullDescription:
+      "A 20-inch sterling silver chain with tiny star-shaped links spaced evenly along its length. The stars are flat-cut and catch light as they move, creating a subtle shimmer against the skin. Lightweight and easy to layer or wear alone. Closes with a small spring-ring clasp.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 16,
+    featured: false,
+  },
+  {
+    id: "grave-chain",
+    slug: "grave-chain",
+    name: "Grave Chain",
+    price: 80,
+    shortDescription:
+      "A dark, heavy chain with a somber weight.",
+    fullDescription:
+      "A sterling silver chain with thick, deliberately oxidized links that give it a weathered, aged character. The dark patina sits in the recesses while the outer faces are lightly polished — creating contrast that deepens with wear. 20 inches with a robust toggle clasp. A chain with presence and gravity.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 8,
+    featured: true,
+  },
+  {
+    id: "box-chain",
+    slug: "box-chain",
+    name: "Box Chain",
+    price: 80,
+    shortDescription:
+      "A square-linked box chain with a crisp profile.",
+    fullDescription:
+      "A 20-inch box chain in sterling silver with square-cut links that create a smooth, geometric line. The flat faces reflect light sharply, giving the chain a clean, modern edge. Stronger than round-link chains of the same gauge — built to hold a pendant or wear solo. Finished with a lobster clasp.",
+    category: "necklaces",
+    material: "Sterling Silver, Zinc, Copper",
+    images: [],
+    inventory: 22,
+    featured: false,
   },
   {
     id: "flat-cuff-bracelet",
@@ -225,18 +315,18 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    id: "bar-pendant-necklace",
-    slug: "bar-pendant-necklace",
-    name: "Bar Pendant Necklace",
+    id: "heart-necklace",
+    slug: "heart-necklace",
+    name: "Heart Necklace",
     price: 80,
     shortDescription:
-      "A short silver bar on a fine chain.",
+      "A sculpted heart pendant with a dark silver finish.",
     fullDescription:
-      "A 25mm horizontal bar pendant on a 20-inch fine cable chain. The bar has a polished front face and softly rounded edges that feel smooth against the skin. The proportions are deliberately understated — visible but never loud. Works equally well on its own or layered with the Thin Chain Necklace.",
+      "A sterling silver heart pendant with an anatomical edge — not a Valentine's heart but something with more weight and detail. The surface has subtle texture and oxidized recesses that give it depth and shadow. Hung from a 20-inch cable chain with a secure clasp. A romantic piece filtered through a darker lens.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: [],
-    inventory: 18,
+    inventory: 11,
     featured: true,
   },
 ];
