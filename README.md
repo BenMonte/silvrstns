@@ -1,6 +1,6 @@
 # SilvrStns
 
-Minimal ecommerce storefront for a silver and stone jewelry brand. Built with Next.js, React, Tailwind CSS, and Stripe Checkout.
+Minimal ecommerce storefront for a gothic jewelry brand. Built with Next.js, React, Tailwind CSS, and Stripe Checkout.
 
 ## Stack
 

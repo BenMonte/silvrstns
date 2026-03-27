@@ -10,7 +10,7 @@ export default function Footer() {
               SILVRSTNS
             </p>
             <p className="mt-2 text-xs leading-relaxed text-text-muted/50">
-              Handcrafted silver &amp; stone jewelry.
+              Handcrafted sterling silver jewelry.
             </p>
           </div>
 

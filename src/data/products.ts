@@ -900,21 +900,6 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    id: "stone-glasses",
-    slug: "stone-glasses",
-    name: "Stone Glasses",
-    price: 150,
-    shortDescription:
-      "Sunglasses with stone-grey lens tint.",
-    fullDescription:
-      "A pair of sunglasses featuring stone-grey tinted lenses with a neutral, earthy tone. The lenses provide full UV protection while maintaining excellent visibility. The frame is constructed from lightweight metal with a comfortable fit designed for extended wear.",
-    category: "glasses",
-    material: "Sterling Silver, Zinc, Copper, Glass",
-    images: ["/products/glasses/stone-glasses-1.jpeg", "/products/glasses/stone-glasses-2.jpeg", "/products/glasses/stone-glasses-3.jpeg"],
-    inventory: 12,
-    featured: true,
-  },
-  {
     id: "chrome-hairclip",
     slug: "chrome-hairclip",
     name: "Chrome Hairclip",
@@ -952,7 +937,7 @@ export const products: Product[] = [
     shortDescription:
       "A split-form keychain in sterling silver.",
     fullDescription:
-      "A small sterling silver keychain with a split, tapered form inspired by broken stone. The design is sculptural and minimal — functional enough to hold keys while carrying aesthetic weight. A piece that works as well as it looks.",
+      "A small sterling silver keychain with a split, tapered form and minimalist design. The piece is sculptural and functional — holding keys while carrying intentional aesthetic weight. A keychain that works as well as it looks.",
     category: "accessories",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/accessories/riven-keychain-1.jpeg", "/products/accessories/riven-keychain-2.jpeg"],

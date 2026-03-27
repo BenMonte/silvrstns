@@ -32,7 +32,7 @@ export default function AboutPage() {
             <p>
               SilvrStns was born out of frustration with jewelry that tries too
               hard. We wanted pieces that disappear into your look instead of
-              dominating it, simple forms in silver and natural stone that feel
+              dominating it, simple forms in sterling silver that feel
               as good as they look.
             </p>
             <p>

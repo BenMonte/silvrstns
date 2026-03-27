@@ -39,20 +39,40 @@ function ComingSoonCard({ category }: { category: string }) {
 
 export default function ShopContent({ products }: { products: Product[] }) {
   const [active, setActive] = useState<string>("All");
+  const [sortBy, setSortBy] = useState<"newest" | "price-low" | "price-high">("newest");
+  const [selectedMaterial, setSelectedMaterial] = useState<string>("All");
 
   const populatedCategories = new Set(products.map((p) => p.category));
   const emptyCategories = PLANNED_CATEGORIES.filter(
     (c) => !populatedCategories.has(c),
   );
 
-  const filtered =
-    active === "All"
-      ? products.sort((a, b) => {
-          const aIndex = PLANNED_CATEGORIES.indexOf(a.category as (typeof PLANNED_CATEGORIES)[number]);
-          const bIndex = PLANNED_CATEGORIES.indexOf(b.category as (typeof PLANNED_CATEGORIES)[number]);
-          return aIndex - bIndex;
-        })
-      : products.filter((p) => p.category === active.toLowerCase());
+  // Get unique materials
+  const materials = Array.from(new Set(products.map((p) => p.material))).sort();
+
+  // Filter by category and material
+  let filtered = products.filter((p) => {
+    const categoryMatch = active === "All" || p.category === active.toLowerCase();
+    const materialMatch = selectedMaterial === "All" || p.material === selectedMaterial;
+    return categoryMatch && materialMatch;
+  });
+
+  // Sort
+  filtered = filtered.sort((a, b) => {
+    if (sortBy === "price-low") return a.price - b.price;
+    if (sortBy === "price-high") return b.price - a.price;
+    // "newest" - maintain order from products array (or reverse for true newest first)
+    return 0;
+  });
+
+  // Also sort by category order when showing All
+  if (active === "All") {
+    filtered.sort((a, b) => {
+      const aIndex = PLANNED_CATEGORIES.indexOf(a.category as (typeof PLANNED_CATEGORIES)[number]);
+      const bIndex = PLANNED_CATEGORIES.indexOf(b.category as (typeof PLANNED_CATEGORIES)[number]);
+      return aIndex - bIndex;
+    });
+  }
 
   const showComingSoon =
     active === "All"
@@ -89,6 +109,37 @@ export default function ShopContent({ products }: { products: Product[] }) {
           ),
         )}
       </nav>
+
+      <div className="mb-8 flex flex-wrap items-center gap-4 sm:mb-10 sm:gap-6">
+        <div className="flex flex-col gap-2">
+          <label className="text-[10px] uppercase tracking-[0.3em] text-text-muted">Sort By</label>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+            className="border border-border bg-transparent px-3 py-2 text-[12px] text-text transition-colors duration-300 hover:border-text"
+          >
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-[10px] uppercase tracking-[0.3em] text-text-muted">Material</label>
+          <select
+            value={selectedMaterial}
+            onChange={(e) => setSelectedMaterial(e.target.value)}
+            className="border border-border bg-transparent px-3 py-2 text-[12px] text-text transition-colors duration-300 hover:border-text"
+          >
+            <option value="All">All Materials</option>
+            {materials.map((material) => (
+              <option key={material} value={material}>
+                {material}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
         {filtered.map((product) => (
