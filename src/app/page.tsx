@@ -3,7 +3,24 @@ import SectionWrapper from "@/components/SectionWrapper";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 
-const featured = products.filter((p) => p.featured);
+function getRandomFeaturedProducts(products: typeof import("@/data/products").products) {
+  const categories = new Set(products.map((p) => p.category));
+  const featured: typeof products = [];
+
+  for (const category of categories) {
+    const categoryProducts = products.filter(
+      (p) => p.category === category && p.featured
+    );
+    
+    // Shuffle and take first 3
+    const shuffled = [...categoryProducts].sort(() => Math.random() - 0.5);
+    featured.push(...shuffled.slice(0, 3));
+  }
+
+  return featured;
+}
+
+const featured = getRandomFeaturedProducts(products);
 
 export default function Home() {
   return (
