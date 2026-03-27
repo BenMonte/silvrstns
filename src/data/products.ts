@@ -479,4 +479,214 @@ export const products: Product[] = [
     inventory: 15,
     featured: true,
   },
+  {
+    id: "snow-bracelet",
+    slug: "snow-bracelet",
+    name: "Snow Bracelet",
+    price: 80,
+    shortDescription:
+      "A bright link bracelet with a clean, icy finish.",
+    fullDescription:
+      "Sterling silver links arranged in a compact pattern that catches and scatters light from every angle. The polished surface reflects with an almost white intensity — cold, clean, and deliberately bright. Each link is solid and smooth, with no excess detail to distract from the material itself. Adjustable fit across standard wrist sizes.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/snow-bracelet-1.jpeg", "/products/bracelets/snow-bracelet-2.jpeg", "/products/bracelets/snow-bracelet-3.jpeg"],
+    inventory: 12,
+    featured: true,
+  },
+  {
+    id: "obsidian-bracelet",
+    slug: "obsidian-bracelet",
+    name: "Obsidian Bracelet",
+    price: 80,
+    shortDescription:
+      "A darkened bracelet with a volcanic, heavy presence.",
+    fullDescription:
+      "A heavily oxidized sterling silver bracelet with a deep black finish inspired by volcanic obsidian. The links are thick and deliberately dense, giving the piece a weight that anchors the wrist. The dark surface absorbs rather than reflects — presence without flash. A piece built for those who wear their darkness with intention.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/obsidian-bracelet-1.jpeg", "/products/bracelets/obsidian-bracelet-2.jpeg"],
+    inventory: 10,
+    featured: false,
+  },
+  {
+    id: "cuban-bracelet",
+    slug: "cuban-bracelet",
+    name: "Cuban Bracelet",
+    price: 80,
+    shortDescription:
+      "A thick Cuban link bracelet in solid silver.",
+    fullDescription:
+      "A sterling silver bracelet built from interlocking Cuban links — wide, flat, and tightly connected. The silhouette is classic and familiar but executed in pure silver for a colder, more refined look. Each link is polished to a high sheen with beveled edges that catch light cleanly. Heavy gauge. Built to be noticed.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/cuban-bracelet-1.jpeg", "/products/bracelets/cuban-bracelet-2.jpeg", "/products/bracelets/cuban-bracelet-3.jpeg"],
+    inventory: 15,
+    featured: true,
+  },
+  {
+    id: "ironveil-bracelet",
+    slug: "ironveil-bracelet",
+    name: "Ironveil Bracelet",
+    price: 80,
+    shortDescription:
+      "A layered bracelet with an industrial, veiled texture.",
+    fullDescription:
+      "A sterling silver bracelet with an open-weave structure that creates a layered, mesh-like appearance. The oxidized finish gives the metal a dark, iron-like quality — worn and intentional. The links are irregular enough to look handcrafted but polished enough to stay refined. Sits flat on the wrist with a controlled drape.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/ironveil-bracelet-1.jpeg", "/products/bracelets/ironveil-bracelet-2.jpeg"],
+    inventory: 9,
+    featured: false,
+  },
+  {
+    id: "knight-bracelet",
+    slug: "knight-bracelet",
+    name: "Knight Bracelet",
+    price: 80,
+    shortDescription:
+      "A chain bracelet with medieval chainmail character.",
+    fullDescription:
+      "Sterling silver links shaped and interlocked to evoke the flat-linked chainmail of medieval armor. The links are wide and structured, giving the bracelet a rigid drape that sits close to the wrist. Finished with a matching toggle clasp that completes the piece without interrupting it. Heavy without being cumbersome.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/knight-bracelet-1.jpeg", "/products/bracelets/knight-bracelet-2.jpeg"],
+    inventory: 11,
+    featured: true,
+  },
+  {
+    id: "star-bracelet",
+    slug: "star-bracelet",
+    name: "Star Bracelet",
+    price: 80,
+    shortDescription:
+      "A bracelet with small star-cut links along its length.",
+    fullDescription:
+      "A sterling silver bracelet built from star-shaped links that catch and scatter light as they move. Each star is flat-cut with defined points and a smooth face — the same design as the Star Chain necklace, scaled for the wrist. Lightweight and easy to stack or wear solo. Closes with a spring-ring clasp.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/star-bracelet-1.jpeg", "/products/bracelets/star-bracelet-2.jpeg"],
+    inventory: 14,
+    featured: false,
+  },
+  {
+    id: "cross-bracelet",
+    slug: "cross-bracelet",
+    name: "Cross Bracelet",
+    price: 80,
+    shortDescription:
+      "A silver bracelet with recurring cross detail.",
+    fullDescription:
+      "A sterling silver bracelet featuring cross motifs embedded across interlocking links. The crosses are flat-cast and flush with the link surface, creating depth through shadow rather than height. The bracelet has a solid weight and a gothic character without being theatrical. Closed with a secure barrel clasp.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/cross-bracelet-1.jpeg", "/products/bracelets/cross-bracelet-2.jpeg"],
+    inventory: 13,
+    featured: true,
+  },
+  {
+    id: "fishtail-cuff",
+    slug: "fishtail-cuff",
+    name: "Fishtail Cuff",
+    price: 80,
+    shortDescription:
+      "An open cuff with a sculpted fishtail silhouette.",
+    fullDescription:
+      "A sterling silver open cuff with a band that fans out at the center into a split fishtail form. The forked shape tapers back into a narrow band on each side — structured and sculptural without excess. The outside is polished to a soft sheen while the inner surface is brushed for comfort against the wrist. Adjustable fit.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/fishtail-cuff-1.jpeg", "/products/bracelets/fishtail-cuff-2.jpeg"],
+    inventory: 10,
+    featured: false,
+  },
+  {
+    id: "dragon-cuff",
+    slug: "dragon-cuff",
+    name: "Dragon Cuff",
+    price: 80,
+    shortDescription:
+      "A scaled cuff with a dragon-inspired relief texture.",
+    fullDescription:
+      "A sterling silver open cuff with a scale-pattern relief across its face — each scale uniform and defined, stacked edge to edge like armored hide. The texture is cast directly into the metal and oxidized in the recesses to give each scale depth and definition. Wide gauge with a firm shape that holds its form on the wrist. Dark and deliberate.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/dragon-cuff-1.jpeg", "/products/bracelets/dragon-cuff-2.jpeg"],
+    inventory: 8,
+    featured: true,
+  },
+  {
+    id: "nail-cuff",
+    slug: "nail-cuff",
+    name: "Nail Cuff",
+    price: 80,
+    shortDescription:
+      "An open cuff with a bold nail-head detail.",
+    fullDescription:
+      "A sterling silver open cuff with a prominent nail-head motif at its center — flat, circular, and anchored into the band like a rivet driven into metal. The rest of the cuff is smooth and unadorned, letting the detail carry the piece. Polished finish with sharp edges. Industrial in origin, refined in execution.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/nail-cuff-1.jpeg", "/products/bracelets/nail-cuff-2.jpeg", "/products/bracelets/nail-cuff-3.jpeg"],
+    inventory: 16,
+    featured: false,
+  },
+  {
+    id: "hollow-cuff",
+    slug: "hollow-cuff",
+    name: "Hollow Cuff",
+    price: 80,
+    shortDescription:
+      "A wide cuff with a hollow, open-faced structure.",
+    fullDescription:
+      "A sterling silver open cuff with a hollow architectural cross-section — the outer face is smooth and wide while the internal cavity keeps the weight controlled. The result is a cuff that looks substantial without feeling heavy on the wrist. Clean edges and a polished finish give it a modern, structural quality. Adjustable fit across most wrist sizes.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/hollow-cuff-1.jpeg", "/products/bracelets/hollow-cuff-2.jpeg"],
+    inventory: 7,
+    featured: false,
+  },
+  {
+    id: "spear-cuff",
+    slug: "spear-cuff",
+    name: "Spear Cuff",
+    price: 80,
+    shortDescription:
+      "A bold open cuff tapering to spear-point ends.",
+    fullDescription:
+      "A sterling silver open cuff with ends that taper to sharp spear-point tips, framing the wrist with controlled aggression. The band is smooth along its length with the detail entirely concentrated at the terminals. Polished to a cold sheen. The tapered ends make sizing simple — press to fit or open slightly to remove.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/spear-cuff-1.jpeg", "/products/bracelets/spear-cuff-2.jpeg"],
+    inventory: 11,
+    featured: true,
+  },
+  {
+    id: "krice-bracelet",
+    slug: "krice-bracelet",
+    name: "Krice Bracelet",
+    price: 80,
+    shortDescription:
+      "A wavy-link bracelet with a blade-like rhythm.",
+    fullDescription:
+      "A sterling silver bracelet with an undulating link pattern inspired by the wavy blade of a kris dagger. The links follow a serpentine path that gives the bracelet a restless, kinetic quality when worn. The surface is polished smooth with oxidized detail in the wave troughs. Closes with a tight fold-over clasp.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/krice-bracelet-1.jpeg", "/products/bracelets/krice-bracelet-2.jpeg"],
+    inventory: 9,
+    featured: false,
+  },
+  {
+    id: "armour-bracelet",
+    slug: "armour-bracelet",
+    name: "Armour Bracelet",
+    price: 80,
+    shortDescription:
+      "A plate-style bracelet inspired by armor segments.",
+    fullDescription:
+      "A sterling silver bracelet built from flat, overlapping plate segments that move with the wrist like articulated armor. Each segment is polished on the outer face with brushed edges that reference the craft of metalwork. The clasp is integrated into the last segment for a seamless profile. Substantial in weight and presence — worn like protection.",
+    category: "bracelets",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/bracelets/armour-bracelet-1.jpeg", "/products/bracelets/armour-bracelet-2.jpeg", "/products/bracelets/armour-bracelet-3.jpeg"],
+    inventory: 12,
+    featured: true,
+  },
 ];
