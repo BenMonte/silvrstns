@@ -37,4 +37,4 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 
 ## Deployment
 
-Deploy to Vercel — no extra configuration needed beyond setting environment variables in the Vercel dashboard.
+Deploy to Vercel. No extra configuration needed beyond setting environment variables in the Vercel dashboard.
