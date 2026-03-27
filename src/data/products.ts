@@ -210,21 +210,6 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    id: "stone-drop-earrings",
-    slug: "stone-drop-earrings",
-    name: "Stone Drop Earrings",
-    price: 60,
-    shortDescription:
-      "Small drop earrings with a natural grey stone.",
-    fullDescription:
-      "Miniature teardrop earrings featuring a natural grey labradorite stone set in a thin silver bezel. The stones are hand-selected for their subtle color shift — a flash of blue-grey when they catch the light. Lightweight enough to wear all day with a secure push-back closure.",
-    category: "earrings",
-    material: "Sterling Silver, Zinc, Copper",
-    images: [],
-    inventory: 3,
-    featured: false,
-  },
-  {
     id: "hollow-ring",
     slug: "hollow-ring",
     name: "Hollow Ring",
