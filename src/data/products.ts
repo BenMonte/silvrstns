@@ -210,21 +210,6 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    id: "flat-cuff-bracelet",
-    slug: "flat-cuff-bracelet",
-    name: "Flat Cuff Bracelet",
-    price: 80,
-    shortDescription:
-      "A slim polished cuff with a soft curve.",
-    fullDescription:
-      "A sleek open cuff bracelet with a flat profile and gently curved ends. Polished to a mirror-like finish on the outside, brushed matte on the inside for comfort. The opening allows for an adjustable fit that works across wrist sizes. Stacks well or wears alone as a quiet statement.",
-    category: "bracelets",
-    material: "Sterling Silver, Zinc, Copper",
-    images: [],
-    inventory: 8,
-    featured: true,
-  },
-  {
     id: "stone-drop-earrings",
     slug: "stone-drop-earrings",
     name: "Stone Drop Earrings",
