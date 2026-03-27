@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SilvrStns — Silver & Stone Jewelry",
+  title: "SilvrStns — Handcrafted Silver Jewelry ",
   description:
-    "Handcrafted silver and stone jewelry. Minimal, modern, made to last.",
+    "Handcrafted silver jewelry. Minimal, simple, made to last.",
 };
 
 export default function RootLayout({
