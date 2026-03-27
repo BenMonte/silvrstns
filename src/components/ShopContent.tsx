@@ -5,11 +5,11 @@ import ProductCard from "@/components/ProductCard";
 import type { Product } from "@/data/products";
 
 const PLANNED_CATEGORIES = [
-  "necklaces",
-  "pendants",
   "rings",
-  "earrings",
+  "pendants",
+  "necklaces",
   "bracelets",
+  "earrings",
   "glasses",
   "accessories",
 ] as const;
@@ -47,7 +47,11 @@ export default function ShopContent({ products }: { products: Product[] }) {
 
   const filtered =
     active === "All"
-      ? products
+      ? products.sort((a, b) => {
+          const aIndex = PLANNED_CATEGORIES.indexOf(a.category as (typeof PLANNED_CATEGORIES)[number]);
+          const bIndex = PLANNED_CATEGORIES.indexOf(b.category as (typeof PLANNED_CATEGORIES)[number]);
+          return aIndex - bIndex;
+        })
       : products.filter((p) => p.category === active.toLowerCase());
 
   const showComingSoon =
