@@ -16,9 +16,6 @@ export const metadata: Metadata = {
   title: "SilvrStns — Handcrafted Silver Jewelry ",
   description:
     "Handcrafted silver jewelry. Minimal, simple, made to last.",
-  icons: {
-    icon: "/silvrstns_logo_mark_transparent.png?v=1",
-  },
 };
 
 export default function RootLayout({
@@ -29,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
-        <link rel="icon" href="/silvrstns_logo_mark_transparent.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" />
         <Analytics />
       </head>
       <body className="min-h-full flex flex-col">
