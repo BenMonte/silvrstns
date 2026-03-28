@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center px-6 pb-20 pt-36 text-center sm:pb-28 sm:pt-48 md:pt-56">
-        <p className="mb-3 text-[11px] uppercase tracking-[0.4em] text-text-muted">
+        <p className="mb-8 text-base font-normal tracking-[0.35em] text-text">
           SILVRSTNS
         </p>
         <p className="mt-8 max-w-md text-[11px] uppercase tracking-[0.4em] text-text-muted">
