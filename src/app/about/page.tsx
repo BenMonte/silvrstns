@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About — SilvrStns",
@@ -21,19 +20,8 @@ export default function AboutPage() {
         </h1>
       </div>
 
-      <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
-        {/* Logo image */}
-        <div className="aspect-[4/5] bg-surface flex items-center justify-center p-8">
-          <Image
-            src="/silvrstns_logo_mark_transparent.png"
-            alt="Silvrstns Logo"
-            width={300}
-            height={300}
-            className="w-full h-full object-contain"
-          />
-        </div>
-
-        <div className="flex flex-col justify-center lg:py-8">
+      <div className="max-w-xl">
+        <div>
           <h2 className="text-xl font-light tracking-tight sm:text-2xl md:text-3xl">
             Made to wear, not to show off.
           </h2>
