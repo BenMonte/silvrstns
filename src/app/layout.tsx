@@ -16,17 +16,6 @@ export const metadata: Metadata = {
   title: "SilvrStns — Handcrafted Silver Jewelry ",
   description:
     "Handcrafted silver jewelry. Minimal, simple, made to last.",
-  openGraph: {
-    title: "SilvrStns — Handcrafted Silver Jewelry",
-    description: "Handcrafted silver jewelry. Minimal, simple, made to last.",
-    images: ["/silvrstns_logo_mark_transparent.png"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SilvrStns — Handcrafted Silver Jewelry",
-    description: "Handcrafted silver jewelry. Minimal, simple, made to last.",
-    images: ["/silvrstns_logo_mark_transparent.png"],
-  },
 };
 
 export default function RootLayout({
