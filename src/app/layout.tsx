@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "SilvrStns — Handcrafted Silver Jewelry ",
   description:
     "Handcrafted silver jewelry. Minimal, simple, made to last.",
+  icons: {
+    icon: "/silvrstns_logo_mark_transparent.png",
+  },
 };
 
 export default function RootLayout({
