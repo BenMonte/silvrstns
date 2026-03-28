@@ -26,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <Analytics />
       </head>
       <body className="min-h-full flex flex-col">
