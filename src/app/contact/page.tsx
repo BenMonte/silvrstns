@@ -98,7 +98,7 @@ export default function ContactPage() {
             <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-text-muted">
               Email
             </p>
-            <p className="text-sm text-text">hello@silvrstns.com</p>
+            <p className="text-sm text-text">silvrstns@gmail.com</p>
           </div>
           <div>
             <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-text-muted">
