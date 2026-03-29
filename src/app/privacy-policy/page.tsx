@@ -3,8 +3,8 @@ import Link from "next/link";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — SilvrStns",
-  description: "Privacy policy for SilvrStns — how we collect, use, and protect your information.",
+  title: "Privacy Policy , SilvrStns",
+  description: "Privacy policy for SilvrStns , how we collect, use, and protect your information.",
 };
 
 const sections = [
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     heading: "Information Sharing",
-    body: "We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted service providers who assist us in operating our website, processing payments, and fulfilling orders — including Stripe (payment processing), shipping carriers (order delivery), and analytics providers (site improvement). These parties are obligated to keep your information confidential.",
+    body: "We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted service providers who assist us in operating our website, processing payments, and fulfilling orders , including Stripe (payment processing), shipping carriers (order delivery), and analytics providers (site improvement). These parties are obligated to keep your information confidential.",
   },
   {
     heading: "Cookies & Analytics",

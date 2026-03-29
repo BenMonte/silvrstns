@@ -3,9 +3,9 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About — SilvrStns",
+  title: "About , SilvrStns",
   description:
-    "The story behind SilvrStns — goth silver jewelry designed to last.",
+    "The story behind SilvrStns , goth silver jewelry designed to last.",
 };
 
 export default function AboutPage() {

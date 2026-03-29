@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 
-// no real backend yet — just shows a confirmation for now
+// no real backend yet , just shows a confirmation for now
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
 

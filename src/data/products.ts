@@ -67,7 +67,7 @@ export const products: Product[] = [
     shortDescription:
       "A bold shield-inspired ring with sharp geometry.",
     fullDescription:
-      "A statement ring built around a raised shield motif — angular lines and a flat face that commands attention without excess. Cast in sterling silver with a weighted feel that sits solid on the finger. The surface is lightly brushed for a matte-industrial finish. Designed to be worn daily as a quiet armor.",
+      "A statement ring built around a raised shield motif , angular lines and a flat face that commands attention without excess. Cast in sterling silver with a weighted feel that sits solid on the finger. The surface is lightly brushed for a matte-industrial finish. Designed to be worn daily as a quiet armor.",
     category: "rings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/rings/protector-ring-1.jpeg", "/products/rings/protector-ring-2.jpeg", "/products/rings/protector-ring-3.jpeg"],
@@ -82,7 +82,7 @@ export const products: Product[] = [
     shortDescription:
       "A flat-faced seal ring with old-world character.",
     fullDescription:
-      "Inspired by traditional signet seals, this ring features a flat oval face and a tapered band. The surface is left smooth and unmarked — made to carry presence, not symbols. Sterling silver with a polished finish that deepens with wear. Looks best on the pinky or middle finger.",
+      "Inspired by traditional signet seals, this ring features a flat oval face and a tapered band. The surface is left smooth and unmarked , made to carry presence, not symbols. Sterling silver with a polished finish that deepens with wear. Looks best on the pinky or middle finger.",
     category: "rings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/rings/seal-ring-1.jpeg", "/products/rings/seal-ring-2.jpeg", "/products/rings/seal-ring-3.jpeg"],
@@ -127,7 +127,7 @@ export const products: Product[] = [
     shortDescription:
       "A delicate lily pendant with organic silver detail.",
     fullDescription:
-      "A sterling silver lily pendant with softly curved petals that fan out from a central stem. The flower is sculpted with just enough detail to read as botanical without being literal. Hung from a 20-inch fine chain with a lobster clasp. Sits gracefully at the collarbone — feminine with a dark-romantic edge.",
+      "A sterling silver lily pendant with softly curved petals that fan out from a central stem. The flower is sculpted with just enough detail to read as botanical without being literal. Hung from a 20-inch fine chain with a lobster clasp. Sits gracefully at the collarbone , feminine with a dark-romantic edge.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/necklaces/lily-chain-1.jpeg", "/products/necklaces/lily-chain-2.jpeg"],
@@ -187,7 +187,7 @@ export const products: Product[] = [
     shortDescription:
       "A dark, heavy chain with a somber weight.",
     fullDescription:
-      "A sterling silver chain with thick, deliberately oxidized links that give it a weathered, aged character. The dark patina sits in the recesses while the outer faces are lightly polished — creating contrast that deepens with wear. 20 inches with a robust toggle clasp. A chain with presence and gravity.",
+      "A sterling silver chain with thick, deliberately oxidized links that give it a weathered, aged character. The dark patina sits in the recesses while the outer faces are lightly polished , creating contrast that deepens with wear. 20 inches with a robust toggle clasp. A chain with presence and gravity.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/necklaces/grave-chain-1.jpeg", "/products/necklaces/grave-chain-2.jpeg"],
@@ -202,7 +202,7 @@ export const products: Product[] = [
     shortDescription:
       "A square-linked box chain with a crisp profile.",
     fullDescription:
-      "A 20-inch box chain in sterling silver with square-cut links that create a smooth, geometric line. The flat faces reflect light sharply, giving the chain a clean, modern edge. Stronger than round-link chains of the same gauge — built to hold a pendant or wear solo. Finished with a lobster clasp.",
+      "A 20-inch box chain in sterling silver with square-cut links that create a smooth, geometric line. The flat faces reflect light sharply, giving the chain a clean, modern edge. Stronger than round-link chains of the same gauge , built to hold a pendant or wear solo. Finished with a lobster clasp.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/necklaces/box-chain-1.jpeg", "/products/necklaces/box-chain-2.jpeg"],
@@ -232,7 +232,7 @@ export const products: Product[] = [
     shortDescription:
       "A wraparound ring inspired by a bent nail.",
     fullDescription:
-      "A sterling silver ring shaped like a nail bent into a circle — the head and tip overlap slightly where they meet. The round cross-section gives it a smooth, industrial feel without sharp edges. A simple concept executed cleanly. Fits naturally on the index or middle finger.",
+      "A sterling silver ring shaped like a nail bent into a circle , the head and tip overlap slightly where they meet. The round cross-section gives it a smooth, industrial feel without sharp edges. A simple concept executed cleanly. Fits naturally on the index or middle finger.",
     category: "rings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/rings/round-nail-ring-1.jpeg", "/products/rings/round-nail-ring-2.jpeg", "/products/rings/round-nail-ring-3.jpeg"],
@@ -247,7 +247,7 @@ export const products: Product[] = [
     shortDescription:
       "A raised cross ring with a dark, gothic edge.",
     fullDescription:
-      "A sterling silver ring featuring a prominent raised cross that extends slightly above the band. The cross has squared-off ends and a deliberate weight to it — gothic without being theatrical. The band narrows toward the back for comfort. Oxidized detailing in the recesses adds depth and shadow.",
+      "A sterling silver ring featuring a prominent raised cross that extends slightly above the band. The cross has squared-off ends and a deliberate weight to it , gothic without being theatrical. The band narrows toward the back for comfort. Oxidized detailing in the recesses adds depth and shadow.",
     category: "rings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/rings/crucifer-ring-1.jpeg", "/products/rings/crucifer-ring-2.jpeg", "/products/rings/crucifer-ring-3.jpeg"],
@@ -277,7 +277,7 @@ export const products: Product[] = [
     shortDescription:
       "A flat-profile nail ring with clean industrial lines.",
     fullDescription:
-      "A sterling silver ring modeled after a flattened nail, wrapped into a band. The head sits flush against the finger while the tapered end tucks underneath. The flat cross-section gives it a modern, architectural quality — industrial without being heavy. Pairs well with other rings or stands on its own.",
+      "A sterling silver ring modeled after a flattened nail, wrapped into a band. The head sits flush against the finger while the tapered end tucks underneath. The flat cross-section gives it a modern, architectural quality , industrial without being heavy. Pairs well with other rings or stands on its own.",
     category: "rings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/rings/flat-nail-ring-1.jpeg", "/products/rings/flat-nail-ring-2.jpeg", "/products/rings/flat-nail-ring-3.jpeg"],
@@ -292,7 +292,7 @@ export const products: Product[] = [
     shortDescription:
       "A sculpted heart pendant with a dark silver finish.",
     fullDescription:
-      "A sterling silver heart pendant with an anatomical edge — not a Valentine's heart but something with more weight and detail. The surface has subtle texture and oxidized recesses that give it depth and shadow. Hung from a 20-inch cable chain with a secure clasp. A romantic piece filtered through a darker lens.",
+      "A sterling silver heart pendant with an anatomical edge , not a Valentine's heart but something with more weight and detail. The surface has subtle texture and oxidized recesses that give it depth and shadow. Hung from a 20-inch cable chain with a secure clasp. A romantic piece filtered through a darker lens.",
     category: "necklaces",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/necklaces/heart-necklace-1.jpeg", "/products/necklaces/heart-necklace-2.jpeg"],
@@ -307,7 +307,7 @@ export const products: Product[] = [
     shortDescription:
       "A sculpted tongue pendant with a rebellious edge.",
     fullDescription:
-      "A sterling silver pendant shaped into a curled, outstretched tongue — provocative without being cartoonish. The surface carries subtle texture that mimics the organic detail of the form. Hung from a 20-inch cable chain with a secure clasp. A piece that speaks before you do.",
+      "A sterling silver pendant shaped into a curled, outstretched tongue , provocative without being cartoonish. The surface carries subtle texture that mimics the organic detail of the form. Hung from a 20-inch cable chain with a secure clasp. A piece that speaks before you do.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/tongue-pendant-1.jpeg", "/products/pendants/tongue-pendant-2.jpeg"],
@@ -322,7 +322,7 @@ export const products: Product[] = [
     shortDescription:
       "A delicate lily bloom cast in sterling silver.",
     fullDescription:
-      "A sterling silver pendant sculpted into a single lily flower with softly curving petals that fan out from a central point. The detail is botanical but restrained — enough to read as a flower without being decorative. Hung from a 20-inch fine chain. Sits at the collarbone with quiet, dark-romantic presence.",
+      "A sterling silver pendant sculpted into a single lily flower with softly curving petals that fan out from a central point. The detail is botanical but restrained , enough to read as a flower without being decorative. Hung from a 20-inch fine chain. Sits at the collarbone with quiet, dark-romantic presence.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/lily-pendant-1.jpeg", "/products/pendants/lily-pendant-2.jpeg"],
@@ -337,7 +337,7 @@ export const products: Product[] = [
     shortDescription:
       "A miniature silver die with recessed pips.",
     fullDescription:
-      "A sterling silver pendant in the shape of a single die with recessed pips on each face. The cube is cast with sharp edges and a satisfying weight that hangs with intention. Each pip is darkened with oxidation for contrast against the polished faces. Hung from a 20-inch chain — luck as an accessory.",
+      "A sterling silver pendant in the shape of a single die with recessed pips on each face. The cube is cast with sharp edges and a satisfying weight that hangs with intention. Each pip is darkened with oxidation for contrast against the polished faces. Hung from a 20-inch chain , luck as an accessory.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/dice-pendant-1.jpeg", "/products/pendants/dice-pendant-2.jpeg"],
@@ -352,7 +352,7 @@ export const products: Product[] = [
     shortDescription:
       "A bullet-shaped pendant with a cold, clean finish.",
     fullDescription:
-      "A sterling silver pendant modeled after a rifle cartridge — tapered at the tip with a flat base and a smooth cylindrical body. The proportions are exact enough to read immediately but scaled down to pendant size. Polished to a cold sheen and hung from a 20-inch cable chain. Carries weight in every sense.",
+      "A sterling silver pendant modeled after a rifle cartridge , tapered at the tip with a flat base and a smooth cylindrical body. The proportions are exact enough to read immediately but scaled down to pendant size. Polished to a cold sheen and hung from a 20-inch cable chain. Carries weight in every sense.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/bullet-pendant-1.jpeg", "/products/pendants/bullet-pendant-2.jpeg", "/products/pendants/bullet-pendant-3.jpeg"],
@@ -367,7 +367,7 @@ export const products: Product[] = [
     shortDescription:
       "A classic dogtag silhouette in solid silver.",
     fullDescription:
-      "A sterling silver dogtag pendant with a flat, smooth face and notched corner — faithful to the military original. The surface is left blank and polished, carrying presence through shape alone. Hung from a 20-inch ball chain that matches the utilitarian aesthetic. A staple piece with built-in gravity.",
+      "A sterling silver dogtag pendant with a flat, smooth face and notched corner , faithful to the military original. The surface is left blank and polished, carrying presence through shape alone. Hung from a 20-inch ball chain that matches the utilitarian aesthetic. A staple piece with built-in gravity.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/dogtag-pendant-1.jpeg", "/products/pendants/dogtag-pendant-2.jpeg", "/products/pendants/dogtag-pendant-3.jpeg"],
@@ -382,7 +382,7 @@ export const products: Product[] = [
     shortDescription:
       "A dark-finished heart pendant with raw detail.",
     fullDescription:
-      "A sterling silver heart pendant with an anatomical lean — textured surface, oxidized recesses, and enough dimension to cast shadow. Not sentimental, not simple. Hung from a 20-inch cable chain with a lobster clasp. A romantic symbol recast through a darker lens.",
+      "A sterling silver heart pendant with an anatomical lean , textured surface, oxidized recesses, and enough dimension to cast shadow. Not sentimental, not simple. Hung from a 20-inch cable chain with a lobster clasp. A romantic symbol recast through a darker lens.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/heart-pendant-1.jpeg", "/products/pendants/heart-pendant-2.jpeg"],
@@ -397,7 +397,7 @@ export const products: Product[] = [
     shortDescription:
       "A sharp miniature dagger pendant in silver.",
     fullDescription:
-      "A sterling silver dagger pendant with a center-ridged blade and detailed crossguard. The proportions are slim and tapered — aggressive in form but refined in scale. Hung from a 20-inch cable chain, it sits flat against the chest with controlled weight. Edge without excess.",
+      "A sterling silver dagger pendant with a center-ridged blade and detailed crossguard. The proportions are slim and tapered , aggressive in form but refined in scale. Hung from a 20-inch cable chain, it sits flat against the chest with controlled weight. Edge without excess.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/dagger-pendant-1.jpeg", "/products/pendants/dagger-pendant-2.jpeg", "/products/pendants/dagger-pendant-3.jpeg"],
@@ -427,7 +427,7 @@ export const products: Product[] = [
     shortDescription:
       "A hexagonal pendant with occult geometry.",
     fullDescription:
-      "A sterling silver pendant built around a hexagonal frame with intersecting lines that form a geometric sigil. The pattern is precise and deliberate — esoteric without being literal. Flat-cast with a polished face and darkened edges that give the design dimension. Hung from a 20-inch chain. Quiet power in a clean shape.",
+      "A sterling silver pendant built around a hexagonal frame with intersecting lines that form a geometric sigil. The pattern is precise and deliberate , esoteric without being literal. Flat-cast with a polished face and darkened edges that give the design dimension. Hung from a 20-inch chain. Quiet power in a clean shape.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/hexora-pendant-1.jpeg", "/products/pendants/hexora-pendant-2.jpeg", "/products/pendants/hexora-pendant-3.jpeg"],
@@ -442,7 +442,7 @@ export const products: Product[] = [
     shortDescription:
       "A solid silver cross with a heavy, gothic presence.",
     fullDescription:
-      "A sterling silver cross pendant with squared-off arms and a deliberate weight that hangs with authority. The surface is lightly textured with oxidized detailing in the recesses — gothic in character but clean in execution. Hung from a 20-inch cable chain with a lobster clasp. A symbol worn with intention.",
+      "A sterling silver cross pendant with squared-off arms and a deliberate weight that hangs with authority. The surface is lightly textured with oxidized detailing in the recesses , gothic in character but clean in execution. Hung from a 20-inch cable chain with a lobster clasp. A symbol worn with intention.",
     category: "pendants",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/pendants/cross-pendant-1.jpeg", "/products/pendants/cross-pendant-2.jpeg", "/products/pendants/cross-pendant-3.jpeg"],
@@ -457,7 +457,7 @@ export const products: Product[] = [
     shortDescription:
       "A bright link bracelet with a clean, icy finish.",
     fullDescription:
-      "Sterling silver links arranged in a compact pattern that catches and scatters light from every angle. The polished surface reflects with an almost white intensity — cold, clean, and deliberately bright. Each link is solid and smooth, with no excess detail to distract from the material itself. Adjustable fit across standard wrist sizes.",
+      "Sterling silver links arranged in a compact pattern that catches and scatters light from every angle. The polished surface reflects with an almost white intensity , cold, clean, and deliberately bright. Each link is solid and smooth, with no excess detail to distract from the material itself. Adjustable fit across standard wrist sizes.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/snow-bracelet-1.jpeg", "/products/bracelets/snow-bracelet-2.jpeg", "/products/bracelets/snow-bracelet-3.jpeg"],
@@ -472,7 +472,7 @@ export const products: Product[] = [
     shortDescription:
       "A darkened bracelet with a volcanic, heavy presence.",
     fullDescription:
-      "A heavily oxidized sterling silver bracelet with a deep black finish inspired by volcanic obsidian. The links are thick and deliberately dense, giving the piece a weight that anchors the wrist. The dark surface absorbs rather than reflects — presence without flash. A piece built for those who wear their darkness with intention.",
+      "A heavily oxidized sterling silver bracelet with a deep black finish inspired by volcanic obsidian. The links are thick and deliberately dense, giving the piece a weight that anchors the wrist. The dark surface absorbs rather than reflects , presence without flash. A piece built for those who wear their darkness with intention.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/obsidian-bracelet-1.jpeg", "/products/bracelets/obsidian-bracelet-2.jpeg"],
@@ -487,7 +487,7 @@ export const products: Product[] = [
     shortDescription:
       "A thick Cuban link bracelet in solid silver.",
     fullDescription:
-      "A sterling silver bracelet built from interlocking Cuban links — wide, flat, and tightly connected. The silhouette is classic and familiar but executed in pure silver for a colder, more refined look. Each link is polished to a high sheen with beveled edges that catch light cleanly. Heavy gauge. Built to be noticed.",
+      "A sterling silver bracelet built from interlocking Cuban links , wide, flat, and tightly connected. The silhouette is classic and familiar but executed in pure silver for a colder, more refined look. Each link is polished to a high sheen with beveled edges that catch light cleanly. Heavy gauge. Built to be noticed.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/cuban-bracelet-1.jpeg", "/products/bracelets/cuban-bracelet-2.jpeg", "/products/bracelets/cuban-bracelet-3.jpeg"],
@@ -502,7 +502,7 @@ export const products: Product[] = [
     shortDescription:
       "A layered bracelet with an industrial, veiled texture.",
     fullDescription:
-      "A sterling silver bracelet with an open-weave structure that creates a layered, mesh-like appearance. The oxidized finish gives the metal a dark, iron-like quality — worn and intentional. The links are irregular enough to look handcrafted but polished enough to stay refined. Sits flat on the wrist with a controlled drape.",
+      "A sterling silver bracelet with an open-weave structure that creates a layered, mesh-like appearance. The oxidized finish gives the metal a dark, iron-like quality , worn and intentional. The links are irregular enough to look handcrafted but polished enough to stay refined. Sits flat on the wrist with a controlled drape.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/ironveil-bracelet-1.jpeg", "/products/bracelets/ironveil-bracelet-2.jpeg"],
@@ -532,7 +532,7 @@ export const products: Product[] = [
     shortDescription:
       "A bracelet with small star-cut links along its length.",
     fullDescription:
-      "A sterling silver bracelet built from star-shaped links that catch and scatter light as they move. Each star is flat-cut with defined points and a smooth face — the same design as the Star Chain necklace, scaled for the wrist. Lightweight and easy to stack or wear solo. Closes with a spring-ring clasp.",
+      "A sterling silver bracelet built from star-shaped links that catch and scatter light as they move. Each star is flat-cut with defined points and a smooth face , the same design as the Star Chain necklace, scaled for the wrist. Lightweight and easy to stack or wear solo. Closes with a spring-ring clasp.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/star-bracelet-1.jpeg", "/products/bracelets/star-bracelet-2.jpeg"],
@@ -562,7 +562,7 @@ export const products: Product[] = [
     shortDescription:
       "An open cuff with a sculpted fishtail silhouette.",
     fullDescription:
-      "A sterling silver open cuff with a band that fans out at the center into a split fishtail form. The forked shape tapers back into a narrow band on each side — structured and sculptural without excess. The outside is polished to a soft sheen while the inner surface is brushed for comfort against the wrist. Adjustable fit.",
+      "A sterling silver open cuff with a band that fans out at the center into a split fishtail form. The forked shape tapers back into a narrow band on each side , structured and sculptural without excess. The outside is polished to a soft sheen while the inner surface is brushed for comfort against the wrist. Adjustable fit.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/fishtail-cuff-1.jpeg", "/products/bracelets/fishtail-cuff-2.jpeg"],
@@ -577,7 +577,7 @@ export const products: Product[] = [
     shortDescription:
       "A scaled cuff with a dragon-inspired relief texture.",
     fullDescription:
-      "A sterling silver open cuff with a scale-pattern relief across its face — each scale uniform and defined, stacked edge to edge like armored hide. The texture is cast directly into the metal and oxidized in the recesses to give each scale depth and definition. Wide gauge with a firm shape that holds its form on the wrist. Dark and deliberate.",
+      "A sterling silver open cuff with a scale-pattern relief across its face , each scale uniform and defined, stacked edge to edge like armored hide. The texture is cast directly into the metal and oxidized in the recesses to give each scale depth and definition. Wide gauge with a firm shape that holds its form on the wrist. Dark and deliberate.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/dragon-cuff-1.jpeg", "/products/bracelets/dragon-cuff-2.jpeg"],
@@ -592,7 +592,7 @@ export const products: Product[] = [
     shortDescription:
       "An open cuff with a bold nail-head detail.",
     fullDescription:
-      "A sterling silver open cuff with a prominent nail-head motif at its center — flat, circular, and anchored into the band like a rivet driven into metal. The rest of the cuff is smooth and unadorned, letting the detail carry the piece. Polished finish with sharp edges. Industrial in origin, refined in execution.",
+      "A sterling silver open cuff with a prominent nail-head motif at its center , flat, circular, and anchored into the band like a rivet driven into metal. The rest of the cuff is smooth and unadorned, letting the detail carry the piece. Polished finish with sharp edges. Industrial in origin, refined in execution.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/nail-cuff-1.jpeg", "/products/bracelets/nail-cuff-2.jpeg", "/products/bracelets/nail-cuff-3.jpeg"],
@@ -607,7 +607,7 @@ export const products: Product[] = [
     shortDescription:
       "A wide cuff with a hollow, open-faced structure.",
     fullDescription:
-      "A sterling silver open cuff with a hollow architectural cross-section — the outer face is smooth and wide while the internal cavity keeps the weight controlled. The result is a cuff that looks substantial without feeling heavy on the wrist. Clean edges and a polished finish give it a modern, structural quality. Adjustable fit across most wrist sizes.",
+      "A sterling silver open cuff with a hollow architectural cross-section , the outer face is smooth and wide while the internal cavity keeps the weight controlled. The result is a cuff that looks substantial without feeling heavy on the wrist. Clean edges and a polished finish give it a modern, structural quality. Adjustable fit across most wrist sizes.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/hollow-cuff-1.jpeg", "/products/bracelets/hollow-cuff-2.jpeg"],
@@ -622,7 +622,7 @@ export const products: Product[] = [
     shortDescription:
       "A bold open cuff tapering to spear-point ends.",
     fullDescription:
-      "A sterling silver open cuff with ends that taper to sharp spear-point tips, framing the wrist with controlled aggression. The band is smooth along its length with the detail entirely concentrated at the terminals. Polished to a cold sheen. The tapered ends make sizing simple — press to fit or open slightly to remove.",
+      "A sterling silver open cuff with ends that taper to sharp spear-point tips, framing the wrist with controlled aggression. The band is smooth along its length with the detail entirely concentrated at the terminals. Polished to a cold sheen. The tapered ends make sizing simple , press to fit or open slightly to remove.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/spear-cuff-1.jpeg", "/products/bracelets/spear-cuff-2.jpeg"],
@@ -652,7 +652,7 @@ export const products: Product[] = [
     shortDescription:
       "A plate-style bracelet inspired by armor segments.",
     fullDescription:
-      "A sterling silver bracelet built from flat, overlapping plate segments that move with the wrist like articulated armor. Each segment is polished on the outer face with brushed edges that reference the craft of metalwork. The clasp is integrated into the last segment for a seamless profile. Substantial in weight and presence — worn like protection.",
+      "A sterling silver bracelet built from flat, overlapping plate segments that move with the wrist like articulated armor. Each segment is polished on the outer face with brushed edges that reference the craft of metalwork. The clasp is integrated into the last segment for a seamless profile. Substantial in weight and presence , worn like protection.",
     category: "bracelets",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/bracelets/armour-bracelet-1.jpeg", "/products/bracelets/armour-bracelet-2.jpeg", "/products/bracelets/armour-bracelet-3.jpeg"],
@@ -682,7 +682,7 @@ export const products: Product[] = [
     shortDescription:
       "Miniature silver bullets as statement earrings.",
     fullDescription:
-      "A pair of sterling silver earrings modeled after rifle cartridges — tapered at the tip with flat bases and smooth cylindrical bodies. The proportions are exact enough to read immediately but scaled down to earring size. Hung from secure posts that sit comfortably on the ear.",
+      "A pair of sterling silver earrings modeled after rifle cartridges , tapered at the tip with flat bases and smooth cylindrical bodies. The proportions are exact enough to read immediately but scaled down to earring size. Hung from secure posts that sit comfortably on the ear.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/bullet-earrings-1.jpeg", "/products/earrings/bullet-earrings-2.jpeg", "/products/earrings/bullet-earrings-3.jpeg"],
@@ -742,7 +742,7 @@ export const products: Product[] = [
     shortDescription:
       "Raised cross earrings with a dark gothic edge.",
     fullDescription:
-      "A pair of sterling silver earrings featuring prominent raised crosses. The crosses have squared-off ends and deliberate weight — gothic without being theatrical. Oxidized detailing in the recesses adds dimension.",
+      "A pair of sterling silver earrings featuring prominent raised crosses. The crosses have squared-off ends and deliberate weight , gothic without being theatrical. Oxidized detailing in the recesses adds dimension.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/crucifer-earrings-1.jpeg", "/products/earrings/crucifer-earrings-2.jpeg"],
@@ -772,7 +772,7 @@ export const products: Product[] = [
     shortDescription:
       "Twilight-inspired earrings with soft oxidation.",
     fullDescription:
-      "A pair of sterling silver earrings with an oxidized finish that mimics the dim light of twilight. The surface has a matte quality that barely reflects — present but not bright. A subtle, contemplative piece.",
+      "A pair of sterling silver earrings with an oxidized finish that mimics the dim light of twilight. The surface has a matte quality that barely reflects , present but not bright. A subtle, contemplative piece.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/gloam-earrings-1.jpeg", "/products/earrings/gloam-earrings-2.jpeg"],
@@ -787,7 +787,7 @@ export const products: Product[] = [
     shortDescription:
       "Dark-finished heart earrings with anatomical detail.",
     fullDescription:
-      "A pair of sterling silver heart earrings with an anatomical lean — textured surface and oxidized recesses that give them depth. Not sentimental, not simple. A romantic symbol recast through a darker lens.",
+      "A pair of sterling silver heart earrings with an anatomical lean , textured surface and oxidized recesses that give them depth. Not sentimental, not simple. A romantic symbol recast through a darker lens.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/heart-earrings-1.jpeg", "/products/earrings/heart-earrings-2.jpeg"],
@@ -802,7 +802,7 @@ export const products: Product[] = [
     shortDescription:
       "Delicate lily flower earrings in sterling silver.",
     fullDescription:
-      "A pair of sterling silver earrings sculpted into lily flowers with softly curving petals that fan out from a central point. The detail is botanical but restrained — enough to read as a flower without being decorative. Quiet, dark-romantic presence.",
+      "A pair of sterling silver earrings sculpted into lily flowers with softly curving petals that fan out from a central point. The detail is botanical but restrained , enough to read as a flower without being decorative. Quiet, dark-romantic presence.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/lily-earrings-1.jpeg", "/products/earrings/lily-earrings-2.jpeg"],
@@ -817,7 +817,7 @@ export const products: Product[] = [
     shortDescription:
       "Miniature skull earrings with clean details.",
     fullDescription:
-      "A pair of sterling silver earrings shaped into miniature skulls with defined bone structure and hollow eye sockets. The form is deliberately bold — dark and unapologetic without being cartoonish. A classic statement piece.",
+      "A pair of sterling silver earrings shaped into miniature skulls with defined bone structure and hollow eye sockets. The form is deliberately bold , dark and unapologetic without being cartoonish. A classic statement piece.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/skull-earrings-1.jpeg", "/products/earrings/skull-earrings-2.jpeg"],
@@ -847,7 +847,7 @@ export const products: Product[] = [
     shortDescription:
       "Star-shaped earrings with flat-cut detail.",
     fullDescription:
-      "A pair of sterling silver earrings shaped into stars with flat-cut faces that catch and scatter light. Each star is polished to a high sheen with defined points. Lightweight and easy to wear — a subtle cosmic touch.",
+      "A pair of sterling silver earrings shaped into stars with flat-cut faces that catch and scatter light. Each star is polished to a high sheen with defined points. Lightweight and easy to wear , a subtle cosmic touch.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/star-earrings-1.jpeg", "/products/earrings/star-earrings-2.jpeg"],
@@ -862,7 +862,7 @@ export const products: Product[] = [
     shortDescription:
       "Sharp thorn-shaped earrings with pointed tips.",
     fullDescription:
-      "A pair of sterling silver earrings shaped like thorns with sharp, tapered points. The form is sleek and aggressive but remains refined in scale. Polished to a cold sheen with clean edges — nature's edge in wearable form.",
+      "A pair of sterling silver earrings shaped like thorns with sharp, tapered points. The form is sleek and aggressive but remains refined in scale. Polished to a cold sheen with clean edges , nature's edge in wearable form.",
     category: "earrings",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/earrings/thorn-earrings-1.jpeg", "/products/earrings/thorn-earrings-2.jpeg"],
@@ -892,7 +892,7 @@ export const products: Product[] = [
     shortDescription:
       "Sunglasses with slate-dark tinted lenses.",
     fullDescription:
-      "A pair of sunglasses with deep slate-grey lenses and metal frames. The dark lens color provides excellent UV protection while maintaining a minimalist aesthetic. The frame design is architectural and precise — modern without being minimal.",
+      "A pair of sunglasses with deep slate-grey lenses and metal frames. The dark lens color provides excellent UV protection while maintaining a minimalist aesthetic. The frame design is architectural and precise , modern without being minimal.",
     category: "glasses",
     material: "Sterling Silver, Zinc, Copper, Glass",
     images: ["/products/glasses/slate-glasses-1.jpeg", "/products/glasses/slate-glasses-2.jpeg", "/products/glasses/slate-glasses-3.jpeg", "/products/glasses/slate-glasses-4.jpeg"],
@@ -937,7 +937,7 @@ export const products: Product[] = [
     shortDescription:
       "Hair tie with crown-inspired metallic detail.",
     fullDescription:
-      "A hair tie featuring a crown-shaped metallic accent in sterling silver. The geometric crown design adds a touch of regal detail to an otherwise simple accessory. Functional and decorative — a small statement piece.",
+      "A hair tie featuring a crown-shaped metallic accent in sterling silver. The geometric crown design adds a touch of regal detail to an otherwise simple accessory. Functional and decorative , a small statement piece.",
     category: "accessories",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/accessories/crowne-hairtie-1.jpeg", "/products/accessories/crowne-hairtie-2.jpeg"],
@@ -952,7 +952,7 @@ export const products: Product[] = [
     shortDescription:
       "A split-form keychain in sterling silver.",
     fullDescription:
-      "A small sterling silver keychain with a split, tapered form and minimalist design. The piece is sculptural and functional — holding keys while carrying intentional aesthetic weight. A keychain that works as well as it looks.",
+      "A small sterling silver keychain with a split, tapered form and minimalist design. The piece is sculptural and functional , holding keys while carrying intentional aesthetic weight. A keychain that works as well as it looks.",
     category: "accessories",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/accessories/riven-keychain-1.jpeg", "/products/accessories/riven-keychain-2.jpeg"],
@@ -967,7 +967,7 @@ export const products: Product[] = [
     shortDescription:
       "A detailed skull keychain with hollow eyes.",
     fullDescription:
-      "A sterling silver keychain shaped into a detailed skull with deep-set hollow eye sockets and defined bone structure. The jaw is slightly open, and the cranium carries fine surface detail. Oxidized in the recesses for depth. Dark and deliberate — a keychain that makes a statement.",
+      "A sterling silver keychain shaped into a detailed skull with deep-set hollow eye sockets and defined bone structure. The jaw is slightly open, and the cranium carries fine surface detail. Oxidized in the recesses for depth. Dark and deliberate , a keychain that makes a statement.",
     category: "accessories",
     material: "Sterling Silver, Zinc, Copper",
     images: ["/products/accessories/skullman-keychain-1.jpeg", "/products/accessories/skullman-keychain-2.jpeg", "/products/accessories/skullman-keychain-3.jpeg"],
@@ -995,7 +995,7 @@ export const products: Product[] = [
     name: "Test Ring",
     price: 3,
     shortDescription:
-      "Test product — do not purchase.",
+      "Test product , do not purchase.",
     fullDescription:
       "This is a test product used to verify checkout. It duplicates the Fishtail Ring at a $3 price point. Remove after testing.",
     category: "rings",

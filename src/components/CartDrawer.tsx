@@ -222,7 +222,7 @@ export default function CartDrawer() {
               </p>
               {error && (
                 <p className="text-[11px] text-red-400/80">
-                  Checkout failed — please try again.
+                  Checkout failed , please try again.
                 </p>
               )}
               <button

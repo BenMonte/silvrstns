@@ -3,7 +3,7 @@ import Link from "next/link";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Shipping — SilvrStns",
+  title: "Shipping , SilvrStns",
   description: "Shipping information for SilvrStns orders.",
 };
 

@@ -19,10 +19,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return { title: "Product Not Found — SilvrStns" };
+  if (!product) return { title: "Product Not Found , SilvrStns" };
 
   return {
-    title: `${product.name} — SilvrStns`,
+    title: `${product.name} , SilvrStns`,
     description: product.shortDescription,
   };
 }
@@ -32,7 +32,7 @@ function InventoryBadge({ count }: { count: number }) {
     return <span className="text-[11px] uppercase tracking-[0.2em] text-red-400/80">Sold out</span>;
   }
   if (count <= LOW_STOCK_THRESHOLD) {
-    return <span className="text-[11px] uppercase tracking-[0.2em] text-amber-400/80">Low stock — {count} left</span>;
+    return <span className="text-[11px] uppercase tracking-[0.2em] text-amber-400/80">Low stock , {count} left</span>;
   }
   return <span className="text-[11px] uppercase tracking-[0.2em] text-text-muted">In stock</span>;
 }

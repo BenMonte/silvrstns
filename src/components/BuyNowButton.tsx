@@ -48,7 +48,7 @@ export default function BuyNowButton({
         window.location.href = data.url;
       }
     } catch {
-      // silent fail — user can retry
+      // silent fail , user can retry
     } finally {
       setLoading(false);
     }

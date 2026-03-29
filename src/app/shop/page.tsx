@@ -4,7 +4,7 @@ import ShopContent from "@/components/ShopContent";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Shop — SilvrStns",
+  title: "Shop , SilvrStns",
   description: "Browse the full SilvrStns collection of silver jewelry.",
 };
 

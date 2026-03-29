@@ -34,7 +34,7 @@ export async function POST(request: Request) {
           currency: "usd",
           product_data: {
             name: product.name,
-            description: `${product.shortDescription} — Size: ${size}`,
+            description: `${product.shortDescription} , Size: ${size}`,
           },
           unit_amount: Math.round(product.price * 100),
         },
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
       return `${product?.name ?? item.productId}: ${item.size || "One Size"}`;
     }).join(" | ");
 
-    // need the origin for redirect urls — falls back to env var for production
+    // need the origin for redirect urls , falls back to env var for production
     const origin = request.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "";
 
     const session = await stripe.checkout.sessions.create({

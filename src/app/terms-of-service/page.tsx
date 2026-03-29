@@ -3,8 +3,8 @@ import Link from "next/link";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — SilvrStns",
-  description: "Terms of service for SilvrStns — the rules governing use of our website and purchases.",
+  title: "Terms of Service , SilvrStns",
+  description: "Terms of service for SilvrStns , the rules governing use of our website and purchases.",
 };
 
 const sections = [
@@ -30,7 +30,7 @@ const sections = [
   },
   {
     heading: "Intellectual Property",
-    body: "All content on this website — including text, images, logos, and product designs — is the property of SilvrStns and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.",
+    body: "All content on this website , including text, images, logos, and product designs , is the property of SilvrStns and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.",
   },
   {
     heading: "Limitation of Liability",
