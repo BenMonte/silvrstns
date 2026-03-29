@@ -31,6 +31,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-border pt-8 text-center">
+          <div className="mb-4 flex justify-center gap-6">
+            <Link href="/privacy-policy" className="text-[11px] tracking-wide text-text-muted/40 transition-colors duration-300 hover:text-text-muted">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="text-[11px] tracking-wide text-text-muted/40 transition-colors duration-300 hover:text-text-muted">
+              Terms of Service
+            </Link>
+          </div>
           <p className="text-[11px] tracking-wide text-text-muted/40">
             &copy; {new Date().getFullYear()} SilvrStns. All rights reserved.
           </p>
