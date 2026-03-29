@@ -989,4 +989,19 @@ export const products: Product[] = [
     inventory: 18,
     featured: false,
   },
+  {
+    id: "test-ring",
+    slug: "test-ring",
+    name: "Test Ring",
+    price: 3,
+    shortDescription:
+      "Test product — do not purchase.",
+    fullDescription:
+      "This is a test product used to verify checkout. It duplicates the Fishtail Ring at a $3 price point. Remove after testing.",
+    category: "rings",
+    material: "Sterling Silver, Zinc, Copper",
+    images: ["/products/rings/fishtail-ring-1.jpeg", "/products/rings/fishtail-ring-2.jpeg", "/products/rings/fishtail-ring-3.jpeg"],
+    inventory: 99,
+    featured: false,
+  },
 ];
