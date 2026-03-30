@@ -13,6 +13,7 @@ function SuccessContent() {
   const [trackingUrl, setTrackingUrl] = useState<string | null>(null);
   const [carrier, setCarrier] = useState<string | null>(null);
   const [shippingError, setShippingError] = useState<string | null>(null);
+  const [labelLoading, setLabelLoading] = useState(true);
 
   useEffect(() => {
     clearCart();
@@ -44,7 +45,8 @@ function SuccessContent() {
         if (data.tracking_url) setTrackingUrl(data.tracking_url);
         if (data.carrier) setCarrier(data.carrier);
       })
-      .catch(() => setShippingError("Could not generate shipping label."));
+      .catch(() => setShippingError("Could not generate shipping label."))
+      .finally(() => setLabelLoading(false));
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -64,8 +66,14 @@ function SuccessContent() {
         Your payment was successful. We&apos;ll start preparing your order
         shortly.
       </p>
-      {trackingNumber && (
-        <p className="mt-4 text-[13px] tracking-[0.15em] text-text-muted">
+      {labelLoading && (
+        <p className="mt-4 flex items-center gap-2 text-[13px] tracking-[0.15em] text-text-muted">
+          <span className="inline-block h-3 w-3 animate-spin rounded-full border border-text-muted border-t-transparent" />
+          Generating shipping label&hellip;
+        </p>
+      )}
+      {!labelLoading && trackingNumber && (
+        <p className="mt-4 text-[13px] tracking-[0.15em] text-text-muted animate-in fade-in">
           {carrier && <span className="uppercase">{carrier} &middot; </span>}
           Tracking:{" "}
           {trackingUrl ? (
@@ -82,7 +90,7 @@ function SuccessContent() {
           )}
         </p>
       )}
-      {shippingError && (
+      {!labelLoading && shippingError && (
         <p className="mt-4 text-[12px] text-red-400">
           Shipping label pending &mdash; we&apos;ll email your tracking info
           shortly.
