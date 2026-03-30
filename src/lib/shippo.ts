@@ -8,6 +8,7 @@ export const FROM_ADDRESS = {
   state: "CA",
   zip: "92037",
   country: "US",
+  phone: "+1 858 000 0000",
   email: "silvrstns@gmail.com",
 };
 
