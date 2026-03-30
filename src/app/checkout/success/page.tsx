@@ -29,7 +29,7 @@ function SuccessContent() {
       })
       .catch(() => {});
 
-    // Generate shipping label via Shippo
+    // Generate shipping label (or retrieve if webhook already created it)
     fetch("/api/shippo/create-label", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

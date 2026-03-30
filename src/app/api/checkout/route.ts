@@ -59,6 +59,7 @@ export async function POST(request: Request) {
       line_items: lineItems,
       metadata: { order_number: orderNumber, sizes: sizesSummary },
       client_reference_id: orderNumber,
+      allow_promotion_codes: true,
       automatic_tax: { enabled: true },
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU"],
