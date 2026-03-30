@@ -13,13 +13,24 @@ export async function POST(request: Request) {
       );
     }
 
-    // Retrieve the Stripe session with shipping details
     const session = await stripe.checkout.sessions.retrieve(session_id);
 
+    // If label was already created for this session, return the stored info
+    if (session.metadata?.tracking_number) {
+      return NextResponse.json({
+        order_number: session.metadata.order_number ?? null,
+        tracking_number: session.metadata.tracking_number,
+        tracking_url: session.metadata.tracking_url ?? null,
+        label_url: session.metadata.label_url ?? null,
+        carrier: session.metadata.carrier ?? null,
+      });
+    }
+
+    // Get shipping address from the checkout session
     const shipping = session.collected_information?.shipping_details;
     if (!shipping?.address) {
       return NextResponse.json(
-        { error: "No shipping address on this session." },
+        { error: "No shipping address found on this session." },
         { status: 400 },
       );
     }
@@ -37,9 +48,23 @@ export async function POST(request: Request) {
       email: session.customer_details?.email ?? undefined,
     });
 
+    // Store tracking info in Stripe metadata so you can see it in your dashboard
+    await stripe.checkout.sessions.update(session_id, {
+      metadata: {
+        ...session.metadata,
+        tracking_number: label.tracking_number,
+        tracking_url: label.tracking_url ?? "",
+        label_url: label.label_url,
+        carrier: label.carrier,
+        shipping_service: label.service,
+        shipping_rate: label.rate_amount,
+      },
+    });
+
     return NextResponse.json({
       order_number: session.metadata?.order_number ?? null,
       tracking_number: label.tracking_number,
+      tracking_url: label.tracking_url,
       label_url: label.label_url,
       carrier: label.carrier,
       service: label.service,
@@ -47,9 +72,10 @@ export async function POST(request: Request) {
       eta_days: label.eta,
     });
   } catch (err) {
-    console.error("Shippo label error:", err);
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Shippo label error:", message);
     return NextResponse.json(
-      { error: "Failed to create shipping label." },
+      { error: message },
       { status: 500 },
     );
   }

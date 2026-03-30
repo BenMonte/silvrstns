@@ -63,6 +63,30 @@ export async function POST(request: Request) {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU"],
       },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: { amount: 599, currency: "usd" },
+            display_name: "Standard Shipping",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: 5 },
+              maximum: { unit: "business_day", value: 7 },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: { amount: 999, currency: "usd" },
+            display_name: "Priority Shipping",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: 2 },
+              maximum: { unit: "business_day", value: 3 },
+            },
+          },
+        },
+      ],
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout/cancel`,
     });

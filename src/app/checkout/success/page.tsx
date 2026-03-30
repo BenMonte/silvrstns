@@ -10,7 +10,9 @@ function SuccessContent() {
   const searchParams = useSearchParams();
   const [orderNumber, setOrderNumber] = useState<string | null>(null);
   const [trackingNumber, setTrackingNumber] = useState<string | null>(null);
+  const [trackingUrl, setTrackingUrl] = useState<string | null>(null);
   const [carrier, setCarrier] = useState<string | null>(null);
+  const [shippingError, setShippingError] = useState<string | null>(null);
 
   useEffect(() => {
     clearCart();
@@ -18,7 +20,7 @@ function SuccessContent() {
     const sessionId = searchParams.get("session_id");
     if (!sessionId) return;
 
-    // 1. Get order number
+    // Get order number
     fetch(`/api/checkout/session?session_id=${encodeURIComponent(sessionId)}`)
       .then((res) => res.json())
       .then((data) => {
@@ -26,7 +28,7 @@ function SuccessContent() {
       })
       .catch(() => {});
 
-    // 2. Generate shipping label (Shippo)
+    // Generate shipping label via Shippo
     fetch("/api/shippo/create-label", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -34,10 +36,15 @@ function SuccessContent() {
     })
       .then((res) => res.json())
       .then((data) => {
+        if (data.error) {
+          setShippingError(data.error);
+          return;
+        }
         if (data.tracking_number) setTrackingNumber(data.tracking_number);
+        if (data.tracking_url) setTrackingUrl(data.tracking_url);
         if (data.carrier) setCarrier(data.carrier);
       })
-      .catch(() => {});
+      .catch(() => setShippingError("Could not generate shipping label."));
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -58,8 +65,27 @@ function SuccessContent() {
         shortly.
       </p>
       {trackingNumber && (
-        <p className="mt-4 text-[13px] uppercase tracking-[0.2em] text-text-muted">
-          Tracking{carrier ? ` (${carrier})` : ""}: {trackingNumber}
+        <p className="mt-4 text-[13px] tracking-[0.15em] text-text-muted">
+          {carrier && <span className="uppercase">{carrier} &middot; </span>}
+          Tracking:{" "}
+          {trackingUrl ? (
+            <a
+              href={trackingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline transition-colors hover:text-accent"
+            >
+              {trackingNumber}
+            </a>
+          ) : (
+            trackingNumber
+          )}
+        </p>
+      )}
+      {shippingError && (
+        <p className="mt-4 text-[12px] text-red-400">
+          Shipping label pending &mdash; we&apos;ll email your tracking info
+          shortly.
         </p>
       )}
       <Link
