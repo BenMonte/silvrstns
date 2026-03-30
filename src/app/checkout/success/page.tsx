@@ -9,19 +9,35 @@ function SuccessContent() {
   const { clearCart } = useCart();
   const searchParams = useSearchParams();
   const [orderNumber, setOrderNumber] = useState<string | null>(null);
+  const [trackingNumber, setTrackingNumber] = useState<string | null>(null);
+  const [carrier, setCarrier] = useState<string | null>(null);
 
   useEffect(() => {
     clearCart();
 
     const sessionId = searchParams.get("session_id");
-    if (sessionId) {
-      fetch(`/api/checkout/session?session_id=${encodeURIComponent(sessionId)}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.order_number) setOrderNumber(data.order_number);
-        })
-        .catch(() => {});
-    }
+    if (!sessionId) return;
+
+    // 1. Get order number
+    fetch(`/api/checkout/session?session_id=${encodeURIComponent(sessionId)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.order_number) setOrderNumber(data.order_number);
+      })
+      .catch(() => {});
+
+    // 2. Generate shipping label (Shippo)
+    fetch("/api/shippo/create-label", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.tracking_number) setTrackingNumber(data.tracking_number);
+        if (data.carrier) setCarrier(data.carrier);
+      })
+      .catch(() => {});
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -41,6 +57,11 @@ function SuccessContent() {
         Your payment was successful. We&apos;ll start preparing your order
         shortly.
       </p>
+      {trackingNumber && (
+        <p className="mt-4 text-[13px] uppercase tracking-[0.2em] text-text-muted">
+          Tracking{carrier ? ` (${carrier})` : ""}: {trackingNumber}
+        </p>
+      )}
       <Link
         href="/shop"
         className="mt-12 inline-block border border-border px-10 py-4 text-[13px] uppercase tracking-[0.2em] text-text transition-all duration-300 hover:border-accent hover:text-accent-hover"
