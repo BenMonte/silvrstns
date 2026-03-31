@@ -28,10 +28,12 @@ export async function POST(request: Request) {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-    // Handle in the background so we return 200 quickly
-    handleCompletedCheckout(session).catch((err) =>
-      console.error("Webhook handler error:", err),
-    );
+    try {
+      await handleCompletedCheckout(session);
+    } catch (err) {
+      console.error("Webhook handler error:", err);
+      // Still return 200 so Stripe doesn't retry
+    }
   }
 
   return NextResponse.json({ received: true });
@@ -131,6 +133,8 @@ async function sendConfirmationEmail(
       trackingUrl: tracking.trackingUrl,
       carrier: tracking.carrier,
     });
+
+    console.log(`✅ Confirmation email sent to ${to} for order #${orderNumber}`);
 
     // Mark email as sent
     await stripe.checkout.sessions.update(sessionId, {
