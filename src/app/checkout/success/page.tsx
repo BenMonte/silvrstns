@@ -63,8 +63,8 @@ function SuccessContent() {
         </p>
       )}
       <p className="mt-8 max-w-md text-base leading-[1.8] text-text-muted">
-        Your payment was successful. We&apos;ll start preparing your order
-        shortly.
+        We&apos;ve sent a confirmation email with your order details.
+        If you don&apos;t see it, please check your spam or junk folder.
       </p>
       {labelLoading && (
         <p className="mt-4 flex items-center gap-2 text-[13px] tracking-[0.15em] text-text-muted">
