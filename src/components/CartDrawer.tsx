@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { getProductById } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/analytics";
+import { useCheckoutOverlay } from "@/components/CheckoutOverlay";
 import Image from "next/image";
 
 export default function CartDrawer() {
@@ -20,6 +21,7 @@ export default function CartDrawer() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const { show: showOverlay, hide: hideOverlay } = useCheckoutOverlay();
 
   async function handleCheckout() {
     trackBeginCheckout(
@@ -28,6 +30,7 @@ export default function CartDrawer() {
     );
     setLoading(true);
     setError(false);
+    showOverlay();
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -44,9 +47,11 @@ export default function CartDrawer() {
       if (data.url) {
         window.location.href = data.url;
       } else {
+        hideOverlay();
         setError(true);
       }
     } catch {
+      hideOverlay();
       setError(true);
     } finally {
       setLoading(false);

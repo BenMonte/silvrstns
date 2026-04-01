@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import { CheckoutOverlayProvider } from "@/components/CheckoutOverlay";
 import Analytics from "@/components/Analytics";
 
 const inter = Inter({
@@ -30,10 +31,12 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <CartProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CartDrawer />
+          <CheckoutOverlayProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+          </CheckoutOverlayProvider>
         </CartProvider>
       </body>
     </html>

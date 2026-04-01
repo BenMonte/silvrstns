@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
+import { useCheckoutOverlay } from "@/components/CheckoutOverlay";
 
 type Props = {
   productId: string;
@@ -24,6 +25,7 @@ export default function BuyNowButton({
 }: Props) {
   const { addItem, items } = useCart();
   const [loading, setLoading] = useState(false);
+  const { show: showOverlay, hide: hideOverlay } = useCheckoutOverlay();
 
   const soldOut = inventory === 0;
 
@@ -35,6 +37,7 @@ export default function BuyNowButton({
     }
 
     setLoading(true);
+    showOverlay();
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -46,9 +49,11 @@ export default function BuyNowButton({
       const data = await res.json();
       if (data.url) {
         window.location.href = data.url;
+      } else {
+        hideOverlay();
       }
     } catch {
-      // silent fail , user can retry
+      hideOverlay();
     } finally {
       setLoading(false);
     }
