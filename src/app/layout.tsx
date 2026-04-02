@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import { CheckoutOverlayProvider } from "@/components/CheckoutOverlay";
+import ChatWidget from "@/components/ChatWidget";
 import Analytics from "@/components/Analytics";
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <CartDrawer />
+            <ChatWidget />
           </CheckoutOverlayProvider>
         </CartProvider>
       </body>
