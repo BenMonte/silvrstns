@@ -150,11 +150,25 @@ export async function POST(req: Request) {
       ],
       max_tokens: 300,
       temperature: 0.7,
+      stream: true,
     });
 
-    const reply = response.choices[0]?.message?.content ?? "Sorry, I couldn't process that.";
+    const stream = new ReadableStream({
+      async start(controller) {
+        const encoder = new TextEncoder();
+        for await (const chunk of response) {
+          const text = chunk.choices[0]?.delta?.content;
+          if (text) {
+            controller.enqueue(encoder.encode(text));
+          }
+        }
+        controller.close();
+      },
+    });
 
-    return NextResponse.json({ reply });
+    return new Response(stream, {
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
   } catch (error) {
     console.error("Chat API error:", error);
     return NextResponse.json(
