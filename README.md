@@ -1,4 +1,4 @@
-# SilvrStns
+# [SilvrStns](https://silvrstns.com) 
 
 Minimal ecommerce storefront for a gothic jewelry brand. Built with Next.js, React, Tailwind CSS, and Stripe Checkout.
 
