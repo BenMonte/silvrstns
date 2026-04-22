@@ -1,5 +1,9 @@
 const SHIPPO_API_URL = "https://api.goshippo.com";
-const SHIPPO_TOKEN = process.env.SHIPPO_TEST_KEY ?? "";
+const SHIPPO_TOKEN =
+  process.env.SHIPPO_API_KEY ??
+  process.env.SHIPPO_LIVE_KEY ??
+  process.env.SHIPPO_TEST_KEY ??
+  "";
 
 export const FROM_ADDRESS = {
   name: "SilvrStns",
@@ -24,7 +28,9 @@ const DEFAULT_PARCEL = {
 
 async function shippoPost(path: string, body: Record<string, unknown>) {
   if (!SHIPPO_TOKEN) {
-    throw new Error("SHIPPO_TEST_KEY is not set in environment variables.");
+    throw new Error(
+      "Shippo key is not set. Define SHIPPO_API_KEY, SHIPPO_LIVE_KEY, or SHIPPO_TEST_KEY.",
+    );
   }
 
   const res = await fetch(`${SHIPPO_API_URL}${path}`, {
