@@ -83,8 +83,8 @@ export default function ChatWidget() {
       {/* Floating trigger button */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className={`fixed bottom-6 right-6 z-50 flex items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-3 text-[12px] tracking-[0.15em] text-text-muted shadow-lg transition-all duration-300 hover:border-accent hover:text-text ${open ? "scale-0 opacity-0" : "scale-100 opacity-100"}`}
-        aria-label="Open sizing and styling assistant"
+        className={`fixed bottom-6 left-6 z-50 flex items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-3 text-[12px] tracking-[0.15em] text-text-muted shadow-lg transition-all duration-300 hover:border-accent hover:text-text ${open ? "scale-0 opacity-0" : "scale-100 opacity-100"}`}
+        aria-label="Open sizing/styling assistant"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,13 +99,13 @@ export default function ChatWidget() {
         >
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         </svg>
-        <span className="hidden sm:inline">Need help with sizing or styling?</span>
-        <span className="sm:hidden">Size &amp; Style Help</span>
+        <span className="hidden sm:inline">Need help with sizing/styling?</span>
+        <span className="sm:hidden">Sizing/Styling Help</span>
       </button>
 
       {/* Chat drawer */}
       <div
-        className={`fixed bottom-0 right-0 z-50 flex h-[min(580px,90dvh)] w-full flex-col border-l border-t border-border bg-bg shadow-2xl transition-all duration-500 ease-out sm:bottom-6 sm:right-6 sm:w-[380px] sm:rounded-lg sm:border ${
+        className={`fixed bottom-0 left-0 z-50 flex h-[min(580px,90dvh)] w-full flex-col border-r border-t border-border bg-bg shadow-2xl transition-all duration-500 ease-out sm:bottom-6 sm:left-6 sm:w-[380px] sm:rounded-lg sm:border ${
           open
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -118,7 +118,7 @@ export default function ChatWidget() {
               SILVRSTNS
             </p>
             <p className="mt-0.5 text-[10px] tracking-[0.1em] text-text-muted">
-              Sizing &amp; Styling Assistant
+              Sizing/Styling Assistant
             </p>
           </div>
           <button
@@ -212,7 +212,7 @@ export default function ChatWidget() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about sizing or styling..."
+            placeholder="Ask about sizing/styling..."
             className="flex-1 bg-transparent text-[13px] text-text placeholder:text-text-muted/40 focus:outline-none"
           />
           <button

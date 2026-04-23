@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { createShippingLabel } from "@/lib/shippo";
-import { sendOrderConfirmation } from "@/lib/email";
+import { sendOrderConfirmation, sendAdminOrderNotification } from "@/lib/email";
 
 export async function POST(request: Request) {
   const body = await request.text();
@@ -42,10 +42,20 @@ export async function POST(request: Request) {
 async function handleCompletedCheckout(session: Stripe.Checkout.Session) {
   const orderNumber = session.metadata?.order_number ?? "N/A";
   const customerEmail = session.customer_details?.email;
+  const customerName = session.customer_details?.name ?? undefined;
   const items = session.metadata?.sizes ?? "N/A";
   const totalAmount = session.amount_total
     ? `$${(session.amount_total / 100).toFixed(2)}`
     : "N/A";
+  const subtotal = session.amount_subtotal
+    ? `$${(session.amount_subtotal / 100).toFixed(2)}`
+    : undefined;
+  const shippingCost = session.shipping_cost?.amount_total
+    ? `$${(session.shipping_cost.amount_total / 100).toFixed(2)}`
+    : undefined;
+  const tax = session.total_details?.amount_tax
+    ? `$${(session.total_details.amount_tax / 100).toFixed(2)}`
+    : undefined;
 
   // Skip if label already created (idempotency)
   if (session.metadata?.tracking_number) {
@@ -67,6 +77,8 @@ async function handleCompletedCheckout(session: Stripe.Checkout.Session) {
   let trackingNumber: string | undefined;
   let trackingUrl: string | undefined;
   let carrier: string | undefined;
+  let shippingService: string | undefined;
+  let labelUrl: string | undefined;
 
   if (shipping?.address) {
     try {
@@ -84,6 +96,8 @@ async function handleCompletedCheckout(session: Stripe.Checkout.Session) {
       trackingNumber = label.tracking_number;
       trackingUrl = label.tracking_url;
       carrier = label.carrier;
+      shippingService = label.service;
+      labelUrl = label.label_url;
 
       // Store label info in Stripe metadata
       await stripe.checkout.sessions.update(session.id, {
@@ -102,7 +116,7 @@ async function handleCompletedCheckout(session: Stripe.Checkout.Session) {
     }
   }
 
-  // Send confirmation email
+  // Send confirmation email to customer
   if (customerEmail) {
     await sendConfirmationEmail(
       session.id,
@@ -112,6 +126,46 @@ async function handleCompletedCheckout(session: Stripe.Checkout.Session) {
       customerEmail,
       { trackingNumber, trackingUrl, carrier },
     );
+  }
+
+  // Send admin notification to silvrstns@gmail.com
+  if (customerEmail) {
+    try {
+      if (!process.env.RESEND_API_KEY) {
+        console.error("Webhook: RESEND_API_KEY not set. Cannot send admin notification.");
+      } else {
+        await sendAdminOrderNotification({
+          orderNumber,
+          customerEmail,
+          customerName,
+          items,
+          totalAmount,
+          subtotal,
+          shippingCost,
+          tax,
+          shipping: shipping?.address
+            ? {
+                name: shipping.name ?? undefined,
+                street1: shipping.address.line1 ?? undefined,
+                street2: shipping.address.line2 ?? undefined,
+                city: shipping.address.city ?? undefined,
+                state: shipping.address.state ?? undefined,
+                zip: shipping.address.postal_code ?? undefined,
+                country: shipping.address.country ?? undefined,
+              }
+            : undefined,
+          trackingNumber,
+          trackingUrl,
+          carrier,
+          shippingService,
+          labelUrl,
+        });
+        console.log(`✅ Admin notification sent for order #${orderNumber}`);
+      }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : JSON.stringify(err);
+      console.error(`Webhook: Failed to send admin notification: ${msg}`);
+    }
   }
 }
 
