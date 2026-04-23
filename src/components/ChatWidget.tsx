@@ -83,7 +83,7 @@ export default function ChatWidget() {
       {/* Floating trigger button */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className={`fixed bottom-6 left-6 z-50 flex items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-3 text-[12px] tracking-[0.15em] text-text-muted shadow-lg transition-all duration-300 hover:border-accent hover:text-text ${open ? "scale-0 opacity-0" : "scale-100 opacity-100"}`}
+        className={`fixed bottom-6 left-6 z-50 flex items-center gap-2.5 rounded-full border border-accent/60 bg-surface-light px-5 py-3 text-[12px] tracking-[0.15em] text-text shadow-[0_8px_24px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.04)] ring-1 ring-white/5 transition-all duration-300 hover:border-accent hover:bg-surface hover:shadow-[0_10px_28px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)] ${open ? "scale-0 opacity-0" : "scale-100 opacity-100"}`}
         aria-label="Open sizing/styling assistant"
       >
         <svg
