@@ -124,6 +124,13 @@ async function sendConfirmationEmail(
   tracking: { trackingNumber?: string; trackingUrl?: string; carrier?: string },
 ) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error(
+        `Webhook: RESEND_API_KEY not set. Cannot send order confirmation to ${to}`,
+      );
+      return;
+    }
+
     await sendOrderConfirmation({
       to,
       orderNumber,
@@ -141,6 +148,7 @@ async function sendConfirmationEmail(
       metadata: { email_sent: "true" },
     });
   } catch (err) {
-    console.error("Webhook: Failed to send confirmation email:", err);
+    const msg = err instanceof Error ? err.message : JSON.stringify(err);
+    console.error(`Webhook: Failed to send confirmation email to ${to}: ${msg}`);
   }
 }

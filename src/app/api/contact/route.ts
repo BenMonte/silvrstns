@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       );
     }
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "SilvrStns <orders@silvrstns.com>",
       to: "silvrstns@gmail.com",
       replyTo: email,
@@ -31,6 +31,14 @@ export async function POST(req: Request) {
         </div>
       `,
     });
+
+    if (result.error) {
+      console.error("Resend contact form error:", result.error);
+      return NextResponse.json(
+        { error: `Failed to send message: ${result.error.message}` },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

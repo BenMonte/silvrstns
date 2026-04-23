@@ -15,6 +15,10 @@ type OrderEmailData = {
 };
 
 export async function sendOrderConfirmation(data: OrderEmailData) {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is not set in environment variables.");
+  }
+
   const trackingHtml = data.trackingNumber
     ? `
       <tr>
@@ -93,10 +97,19 @@ export async function sendOrderConfirmation(data: OrderEmailData) {
     </table>
   </div>`;
 
-  await resend.emails.send({
-    from: FROM_EMAIL,
-    to: data.to,
-    subject: `Order Confirmed — #${data.orderNumber}`,
-    html,
-  });
+  try {
+    const result = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: data.to,
+      subject: `Order Confirmed — #${data.orderNumber}`,
+      html,
+    });
+
+    if (result.error) {
+      throw new Error(`Resend API error: ${result.error.message}`);
+    }
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : JSON.stringify(err);
+    throw new Error(`Failed to send order confirmation email to ${data.to}: ${msg}`);
+  }
 }
