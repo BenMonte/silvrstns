@@ -6,7 +6,6 @@ import { useCart } from "@/context/CartContext";
 import { getProductById } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/analytics";
 import { useCheckoutOverlay } from "@/components/CheckoutOverlay";
-import Image from "next/image";
 
 export default function CartDrawer() {
   const {
@@ -123,17 +122,9 @@ export default function CartDrawer() {
                     <Link
                       href={`/shop/${item.slug}`}
                       onClick={closeDrawer}
-                      className="relative block h-20 w-16 flex-shrink-0 rounded-sm bg-surface overflow-hidden"
+                      className="flex h-20 w-16 flex-shrink-0 items-center justify-center rounded-sm bg-surface text-[9px] uppercase tracking-[0.2em] text-text-muted/50"
                     >
-                      {product?.images?.[0] && (
-                        <Image
-                          src={product.images[0]}
-                          alt={item.name}
-                          fill
-                          sizes="64px"
-                          className="object-cover"
-                        />
-                      )}
+                      Item
                     </Link>
 
                     <div className="flex flex-1 flex-col justify-between">

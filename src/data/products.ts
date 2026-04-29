@@ -43,7 +43,7 @@ export function getRelatedProducts(product: Product, limit = 4): Product[] {
     .slice(0, limit);
 }
 
-export const products: Product[] = [
+const productCatalog: Product[] = [
   {
     id: "fishtail-ring",
     slug: "fishtail-ring",
@@ -1005,3 +1005,8 @@ export const products: Product[] = [
     featured: false,
   },
 ];
+
+export const products: Product[] = productCatalog.map((product) => ({
+  ...product,
+  images: [],
+}));
